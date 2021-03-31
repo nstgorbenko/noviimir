@@ -1,0 +1,168 @@
+doctype html
+html(lang="ru")
+
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="./css/style.css")
+    title Новый мир. Оформление заказа
+
+  body.page
+    header.page-header
+      .page__container
+        a.page-header__logo-link(href="#")
+          img.page-header__logo-image(width="223" height="72" src="img/icon-logo.svg" alt="Логотип компании Новый мир")
+
+    main.page-main
+      .page__container
+        .breadcrumbs.page-main__breadcrumbs
+          a.breadcrumbs__link(href="#")
+            svg.breadcrumbs__icon(width="6", height="12")
+              use(xlink:href="img/sprite.svg#icon-arrow-breadcrumb")
+            | Вернуться в корзину
+
+        section.order
+          .order-info
+            .order-card
+              p.order-card__title
+                | Ваш заказ
+                span.order-card__number № 6797677
+              .order-card__part
+                p.order-card__line Товары (4)
+                  span 2 961 ₽
+                p.order-card__line Доставка
+                  span 400 ₽
+              .order-card__part
+                p.order-card__line.order-card__line--total Итого
+                  span 3 361 ₽
+                p.order-card__line.order-card__line--prepay Предоплата
+                  span 0 ₽
+              .order-card__part
+                button.button.order-card__button(type="button") Подтвердить заказ
+                p.order-card__button-caption Нажимая на кнопку «Перейти к оплате», Вы соглашаетесь на 
+                  a(href="#" target="_blank") обработку персональных данных
+
+            .order-feature
+              ul.order-feature__list
+                li.order-feature__item.order-feature__item--help
+                  p.order-feature__name Нужна помощь?
+                    span
+                      | &#x20;
+                      a.order-feature__name-link(href="tel:88003333342") 8 (800) 222-23-42
+                      | &#x20;(c 09:00 до 18:00)
+                  p.order-feature__text без перерыва и выходных
+                li.order-feature__item.order-feature__item--help
+                  p.order-feature__name Безопасная оплата
+                  p.order-feature__text оплата через процессинг ОАО "Сбербанк России"
+                li.order-feature__item.order-feature__item--guaranty
+                  p.order-feature__name Гарантия доставки
+                  p.order-feature__text работаем с службой курьерской доставки СДЭК
+
+          .order-process
+            h1.title.title--h1 Оформление заказа
+
+            .order-part.register
+              h2.title.title--h2.order-part__title Войти или зарегистрироваться
+              p.register__field
+                input.input(type="text", name="register-data" placeholder="Телефон или e-mail", required)
+                button.button(type="button") Получить код
+                button.input-button.input-button--help(type="button")
+                .input__info
+                  p.input__text Телефон в формате: 7 000 000 00 00
+                  p.input__text Формат e-mail: name@exampie.ru
+              p.input-caption Нажимая на кнопку «Получить код», Вы соглашаетесь на 
+                a(href="#" target="_blank") обработку персональных данных
+              p.register__join
+                input#register.visually-hidden(type="checkbox", name="register")
+                label(for="register") Зарегистрируйте меня после оформления заказа
+
+            .order-part.city
+              h2.title.title--h2.order-part__title
+                span.order-part__number 1.
+                | Ваш город
+              input.input(type="text", name="order-city" placeholder="Ваш город", required)
+
+            .order-part.receive-way
+              h2.title.title--h2.order-part__title
+                span.order-part__number 2.
+                | Выберите способ получения
+              p.receive-way__place В г. Краснодар
+              ul.receive-way__list
+                li.receive-way__item
+                  input#pickup.visually-hidden(type="radio", name="receive-way", value="pickup", checked)
+                  label(for="pickup")
+                    p.receive-way__name.receive-way__name--pickup Самовывоз из магазина
+                    p.receive-way__time Сегодня, Бесплатно
+                li.receive-way__item
+                  input#delivery.visually-hidden(type="radio", name="receive-way", value="delivery")
+                  label(for="delivery")
+                    p.receive-way__name.receive-way__name--delivery Доставка
+                    p.receive-way__time Курьером до двери
+              .pickup.receive-way__pickup
+                .pickup__part
+                  p.pickup__address г. Краснодар, ул. Крупской, 280
+                  ul.pickup__list
+                    li.pickup__item.pickup__item--time Часы работы:
+                      span 9.00 - 19.00 без перерывов и выходных
+                    li.pickup__item.pickup__item--info Можно забрать через 15 минут или в течении 14 дней
+                  button.button--clear.pickup__button Изменить магазин
+                .pickup__part
+                  a.pickup__image-link
+                    img.pickup__image(width="155" height="108" src="img/shop.jpg" alt="г. Краснодар, ул. Крупской, 280")
+                    p.pickup__image-caption Кликните, чтобы увеличить
+                    img.pickup__image--full(width="155" height="108" src="img/shop.jpg" alt="г. Краснодар, ул. Крупской, 280")
+                .pickup__part
+                  <iframe src="https://yandex.ru/map-widget/v1/-/CCUURDUQxA" width="210" height="218" frameborder="0" allowfullscreen="true"></iframe>
+
+            .order-part.pay-way
+              h2.title.title--h2.order-part__title
+                span.order-part__number 3.
+                | Выберите способ оплаты
+              ul.pay-way__list
+                li.pay-way__item
+                  input#card.visually-hidden(type="radio", name="pay-way", value="card", checked)
+                  label(for="card")
+                    img.pay-way__image(width="209" height="22" src="img/icon-cards.svg" alt="Способы оплаты")
+                    p.pay-way__name.pay-way__name--card Банковская карта
+                    p.pay-way__text Комиссия 0%, самый безопасный способ
+                li.pay-way__item
+                  input#cash.visually-hidden(type="radio", name="pay-way", value="cash")
+                  label(for="cash")
+                    p.pay-way__name.pay-way__name--cash При получении
+                    p.pay-way__text Оплата наличными или банковской картой
+                li.pay-way__item
+                  input#account.visually-hidden(type="radio", name="pay-way", value="account")
+                  label(for="account")
+                    p.pay-way__name.pay-way__name--account Банковский счет
+                    p.pay-way__text Оплата через р/с для юр. лиц
+
+            .order-part.user-data
+              h2.title.title--h2.order-part__title
+                span.order-part__number 4.
+                | Данные покупателя
+              p.user-data__field
+                input.input(type="tel", name="tel" placeholder="Телефон", required)
+              p.user-data__field
+                input.input(type="email", name="email" placeholder="E-mail (необязательно)")
+              p.user-data__field
+                textarea.input(name="comment" placeholder="Коментарий к заказу")
+
+            .order-part.user-data
+              .promocode.show
+                button.promocode__button(type="button") Промокод
+                p.promocode__field
+                  input.input(type="text", name="promocode-data" placeholder="Промокод")
+                  button.button--min.button--next(type="button")
+
+    footer.page-footer
+      .page__container
+        p.copyright 2021 © «Новый мир»
+        p.payment
+          img.payment__image(width="272" height="48" src="img/icon-cards-pale.svg" alt="Способы оплаты")
+        p.privacy
+          a.privacy__link(href="#") Политика конфиденциальности
+
+    script(src="js/index.js" type="module")
+
+    .svg-library
+      include ../img/sprite.svg

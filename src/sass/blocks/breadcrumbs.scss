@@ -1,0 +1,15 @@
+.breadcrumbs__link {
+  @include link-reset();
+  @include font(12px, 16px, 400);
+  position: relative;
+  padding-left: 12px;
+  color: $color-text-lighter;
+}
+
+.breadcrumbs__icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: none;
+}

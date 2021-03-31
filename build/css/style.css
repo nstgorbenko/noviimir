@@ -2,25 +2,25 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
-  src: url("./font/roboto-v20-latin-300.woff2") format("woff2"), url("./font/roboto-v20-latin-300.woff") format("woff"); }
+  src: url("../font/roboto-v20-latin-300.woff2") format("woff2"), url("../font/roboto-v20-latin-300.woff") format("woff"); }
 
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url("./font/roboto-v20-latin-regular.woff2") format("woff2"), url("./font/roboto-v20-latin-regular.woff") format("woff"); }
+  src: url("../font/roboto-v20-latin-regular.woff2") format("woff2"), url("../font/roboto-v20-latin-regular.woff") format("woff"); }
 
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  src: url("./font/roboto-v20-latin-500.woff2") format("woff2"), url("./font/roboto-v20-latin-500.woff") format("woff"); }
+  src: url("../font/roboto-v20-latin-500.woff2") format("woff2"), url("../font/roboto-v20-latin-500.woff") format("woff"); }
 
 @font-face {
   font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 600;
-  src: url("./font/SourceSansPro-SemiBold.woff2") format("woff2"), url("./font/SourceSansPro-SemiBold.woff") format("woff"); }
+  src: url("../font/SourceSansPro-SemiBold.woff2") format("woff2"), url("../font/SourceSansPro-SemiBold.woff") format("woff"); }
 
 html {
   box-sizing: border-box; }
@@ -46,6 +46,9 @@ img {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(100%);
           clip-path: inset(100%); }
+
+.svg-library {
+  display: none; }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -352,5 +355,39 @@ template {
    */
 [hidden] {
   display: none; }
+
+.breadcrumbs__link {
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  position: relative;
+  padding-left: 12px;
+  color: #999999; }
+
+.breadcrumbs__icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: none; }
+
+.page-header {
+  padding: 26px 0 20px;
+  border-bottom: 1px solid #EDEDED; }
+
+.page-main {
+  padding: 17px 0 0; }
+
+.page {
+  background-color: #F8F8F8; }
+
+.page__container {
+  width: 1232px;
+  margin: 0 auto; }
 
 /*# sourceMappingURL=style.css.map */

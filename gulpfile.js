@@ -57,7 +57,7 @@ export const scripts = () => {
 export const sprite = () => {
   return gulp.src('src/img/sprite/*.svg')
     .pipe(svgstore({inlineSvg: true}))
-    .pipe(gulp.dest('build/img'));
+    .pipe(gulp.dest('src/img'));
 };
 
 // Copy
@@ -105,11 +105,11 @@ export const watch = () => {
 export default gulp.series(
     clean,
     gulp.parallel(
-        html,
-        styles,
-        scripts,
-        copy,
-        sprite,
+      sprite,
+      copy,
+      html,
+      styles,
+      scripts,
     ),
     gulp.parallel(
         watch,
