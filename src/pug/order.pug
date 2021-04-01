@@ -22,7 +22,108 @@ html(lang="ru")
             | Вернуться в корзину
 
         section.order
-          .order-info
+          .order__process
+            h1.title.title--h1 Оформление заказа
+
+            .order__part.register
+              h2.title.title--h2.order__part-title Войти или зарегистрироваться
+              .register__field
+                input.input.input--with-button(type="text", name="register-data" placeholder="Телефон или e-mail", required)
+                button.button.button--with-input(type="button") Получить код
+                button.input__button(type="button", aria-label="Узнать формат данных")
+                  svg.input__icon.input__icon--help(width="24", height="24")
+                    use(xlink:href="img/sprite.svg#icon-help")
+                .input__info
+                  p.input__info-text Телефон в формате: 7 000 000 00 00
+                  p.input__info-text Формат e-mail: name@exampie.ru
+              p.input__caption Нажимая на кнопку «Получить код», Вы соглашаетесь 
+                a.input__caption-link(href="#" target="_blank") на обработку персональных данных
+              p.register__join
+                input#register.register__checkbox.visually-hidden(type="checkbox", name="register")
+                label.register__checkbox-label(for="register") Зарегистрируйте меня после оформления заказа
+
+            .order__part.city
+              h2.title.title--h2.order__part-title
+                span.order__part-number 1.
+                |
+                | Ваш город
+              input.input.city__input(type="text", name="order-city" placeholder="Ваш город", required)
+
+            .order__part.receive-way
+              h2.title.title--h2.order__part-title
+                span.order__part-number 2.
+                |
+                | Выберите способ получения
+              p.receive-way__place В г. Краснодар
+              ul.receive-way__list
+                li.receive-way__item
+                  input#pickup.receive-way__item-checkbox.visually-hidden(type="radio", name="receive-way", value="pickup", checked)
+                  label.receive-way__item-box(for="pickup")
+                    span.receive-way__name.receive-way__name--pickup Самовывоз из магазина
+                    span.receive-way__time Сегодня, Бесплатно
+                li.receive-way__item
+                  input#delivery.receive-way__item-checkbox.visually-hidden(type="radio", name="receive-way", value="delivery")
+                  label.receive-way__item-box(for="delivery")
+                    span.receive-way__name.receive-way__name--delivery Доставка
+                    span.receive-way__time Курьером до двери
+              .pickup.receive-way__pickup
+                .pickup__part
+                  p.pickup__address г. Краснодар, ул. Крупской, 280
+                  ul.pickup__list
+                    li.pickup__item.pickup__item--time Часы работы:
+                      span 9.00 - 19.00 без перерывов и выходных
+                    li.pickup__item.pickup__item--info Можно забрать через 15
+                      span минут или в течении 14 дней
+                  button.button.button--clear.pickup__button Изменить магазин
+                .pickup__part
+                  a.pickup__image-link
+                    img.pickup__image(width="155" height="108" src="img/shop.jpg" alt="г. Краснодар, ул. Крупской, 280", tabindex="0")
+                    p.pickup__image-caption Кликните, чтобы увеличить
+                    img.pickup__full-image(width="155" height="108" src="img/shop-big.jpg" alt="г. Краснодар, ул. Крупской, 280")
+                .pickup__part
+                  iframe.pickup__map(src="https://yandex.ru/map-widget/v1/-/CCUURDUQxA" width="210" height="218" frameborder="0")
+
+            .order__part.pay-way
+              h2.title.title--h2.order__part-title
+                span.order__part-number 3.
+                | Выберите способ оплаты
+              ul.pay-way__list
+                li.pay-way__item
+                  input#card.visually-hidden(type="radio", name="pay-way", value="card", checked)
+                  label(for="card")
+                    img.pay-way__image(width="209" height="22" src="img/icon-cards.svg" alt="Способы оплаты")
+                    span.pay-way__name.pay-way__name--card Банковская карта
+                    span.pay-way__text Комиссия 0%, самый безопасный способ
+                li.pay-way__item
+                  input#cash.visually-hidden(type="radio", name="pay-way", value="cash")
+                  label(for="cash")
+                    span.pay-way__name.pay-way__name--cash При получении
+                    span.pay-way__text Оплата наличными или банковской картой
+                li.pay-way__item
+                  input#account.visually-hidden(type="radio", name="pay-way", value="account")
+                  label(for="account")
+                    span.pay-way__name.pay-way__name--account Банковский счет
+                    span.pay-way__text Оплата через р/с для юр. лиц
+
+            .order__part.user-data
+              h2.title.title--h2.order__part-title
+                span.order__part-number 4.
+                | Данные покупателя
+              p.user-data__field
+                input.input(type="tel", name="tel" placeholder="Телефон", required)
+              p.user-data__field
+                input.input(type="email", name="email" placeholder="E-mail (необязательно)")
+              p.user-data__field
+                textarea.input(name="comment" placeholder="Коментарий к заказу")
+
+            .order__part.user-data
+              .promocode.show
+                button.promocode__button(type="button") Промокод
+                p.promocode__field
+                  input.input(type="text", name="promocode-data" placeholder="Промокод")
+                  button.button--min.button--next(type="button")
+
+          .order__info
             .order-card
               p.order-card__title
                 | Ваш заказ
@@ -47,9 +148,9 @@ html(lang="ru")
                 li.order-feature__item.order-feature__item--help
                   p.order-feature__name Нужна помощь?
                     span
-                      | &#x20;
+                      |
                       a.order-feature__name-link(href="tel:88003333342") 8 (800) 222-23-42
-                      | &#x20;(c 09:00 до 18:00)
+                      | (c 09:00 до 18:00)
                   p.order-feature__text без перерыва и выходных
                 li.order-feature__item.order-feature__item--help
                   p.order-feature__name Безопасная оплата
@@ -57,102 +158,6 @@ html(lang="ru")
                 li.order-feature__item.order-feature__item--guaranty
                   p.order-feature__name Гарантия доставки
                   p.order-feature__text работаем с службой курьерской доставки СДЭК
-
-          .order-process
-            h1.title.title--h1 Оформление заказа
-
-            .order-part.register
-              h2.title.title--h2.order-part__title Войти или зарегистрироваться
-              p.register__field
-                input.input(type="text", name="register-data" placeholder="Телефон или e-mail", required)
-                button.button(type="button") Получить код
-                button.input-button.input-button--help(type="button")
-                .input__info
-                  p.input__text Телефон в формате: 7 000 000 00 00
-                  p.input__text Формат e-mail: name@exampie.ru
-              p.input-caption Нажимая на кнопку «Получить код», Вы соглашаетесь на 
-                a(href="#" target="_blank") обработку персональных данных
-              p.register__join
-                input#register.visually-hidden(type="checkbox", name="register")
-                label(for="register") Зарегистрируйте меня после оформления заказа
-
-            .order-part.city
-              h2.title.title--h2.order-part__title
-                span.order-part__number 1.
-                | Ваш город
-              input.input(type="text", name="order-city" placeholder="Ваш город", required)
-
-            .order-part.receive-way
-              h2.title.title--h2.order-part__title
-                span.order-part__number 2.
-                | Выберите способ получения
-              p.receive-way__place В г. Краснодар
-              ul.receive-way__list
-                li.receive-way__item
-                  input#pickup.visually-hidden(type="radio", name="receive-way", value="pickup", checked)
-                  label(for="pickup")
-                    p.receive-way__name.receive-way__name--pickup Самовывоз из магазина
-                    p.receive-way__time Сегодня, Бесплатно
-                li.receive-way__item
-                  input#delivery.visually-hidden(type="radio", name="receive-way", value="delivery")
-                  label(for="delivery")
-                    p.receive-way__name.receive-way__name--delivery Доставка
-                    p.receive-way__time Курьером до двери
-              .pickup.receive-way__pickup
-                .pickup__part
-                  p.pickup__address г. Краснодар, ул. Крупской, 280
-                  ul.pickup__list
-                    li.pickup__item.pickup__item--time Часы работы:
-                      span 9.00 - 19.00 без перерывов и выходных
-                    li.pickup__item.pickup__item--info Можно забрать через 15 минут или в течении 14 дней
-                  button.button--clear.pickup__button Изменить магазин
-                .pickup__part
-                  a.pickup__image-link
-                    img.pickup__image(width="155" height="108" src="img/shop.jpg" alt="г. Краснодар, ул. Крупской, 280")
-                    p.pickup__image-caption Кликните, чтобы увеличить
-                    img.pickup__image--full(width="155" height="108" src="img/shop.jpg" alt="г. Краснодар, ул. Крупской, 280")
-                .pickup__part
-                  <iframe src="https://yandex.ru/map-widget/v1/-/CCUURDUQxA" width="210" height="218" frameborder="0" allowfullscreen="true"></iframe>
-
-            .order-part.pay-way
-              h2.title.title--h2.order-part__title
-                span.order-part__number 3.
-                | Выберите способ оплаты
-              ul.pay-way__list
-                li.pay-way__item
-                  input#card.visually-hidden(type="radio", name="pay-way", value="card", checked)
-                  label(for="card")
-                    img.pay-way__image(width="209" height="22" src="img/icon-cards.svg" alt="Способы оплаты")
-                    p.pay-way__name.pay-way__name--card Банковская карта
-                    p.pay-way__text Комиссия 0%, самый безопасный способ
-                li.pay-way__item
-                  input#cash.visually-hidden(type="radio", name="pay-way", value="cash")
-                  label(for="cash")
-                    p.pay-way__name.pay-way__name--cash При получении
-                    p.pay-way__text Оплата наличными или банковской картой
-                li.pay-way__item
-                  input#account.visually-hidden(type="radio", name="pay-way", value="account")
-                  label(for="account")
-                    p.pay-way__name.pay-way__name--account Банковский счет
-                    p.pay-way__text Оплата через р/с для юр. лиц
-
-            .order-part.user-data
-              h2.title.title--h2.order-part__title
-                span.order-part__number 4.
-                | Данные покупателя
-              p.user-data__field
-                input.input(type="tel", name="tel" placeholder="Телефон", required)
-              p.user-data__field
-                input.input(type="email", name="email" placeholder="E-mail (необязательно)")
-              p.user-data__field
-                textarea.input(name="comment" placeholder="Коментарий к заказу")
-
-            .order-part.user-data
-              .promocode.show
-                button.promocode__button(type="button") Промокод
-                p.promocode__field
-                  input.input(type="text", name="promocode-data" placeholder="Промокод")
-                  button.button--min.button--next(type="button")
 
     footer.page-footer
       .page__container

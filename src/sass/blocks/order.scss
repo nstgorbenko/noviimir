@@ -1,0 +1,16 @@
+.order {
+  display: flex;
+}
+
+.order__process {
+  margin-top: 50px;
+}
+
+.order__part {
+  margin-top: 61px;
+}
+
+.order__part-number {
+  @include font(24px, 20px, 500);
+  color: $color-step;
+}

@@ -4,6 +4,11 @@
   position: relative;
   padding-left: 12px;
   color: $color-text-lighter;
+  transition: $main-transition;
+
+  &:hover {
+    color: $color-text;
+  }
 }
 
 .breadcrumbs__icon {
@@ -12,4 +17,10 @@
   top: 50%;
   transform: translateY(-50%);
   fill: none;
+  stroke: $color-text-lighter;
+  transition: $main-transition;
+
+  .breadcrumbs__link:hover & {
+    stroke: $color-text;
+  }
 }

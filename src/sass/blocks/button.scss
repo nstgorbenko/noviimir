@@ -1,0 +1,30 @@
+.button {
+  @include button-reset();
+  @include font(14px, 20px, 400);
+  color: $white;
+  background-color: $color-button;
+  border: 1px solid $color-button;
+  border-radius: 6px;
+  transition: $main-transition;
+
+  &:hover,
+  &:focus {
+    background-color: $color-button-hover;
+  }
+
+  &--clear {
+    color: $color-text;
+    background-color: $white;
+    border: 1px solid $color-checkbox;
+
+    &:hover,
+    &:focus {
+      background-color: rgba($color-text-lighter, 0.2);
+    }
+  }
+
+  &--with-input {
+    margin-left: -28px;
+    padding: 14px 29px;
+  }
+}

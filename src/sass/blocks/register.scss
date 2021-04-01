@@ -1,0 +1,28 @@
+.register__field {
+  @include reset();
+  display: flex;
+  position: relative;
+  margin-top: 24px;
+}
+
+.register__join {
+  margin-top: 22px;
+}
+
+.register__checkbox-label {
+  @include font(14px, 20px, 400);
+  position: relative;
+  padding-left: 27px;
+  color: $color-text-light;
+
+  &:before {
+    @include pseudo(21px, 21px);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+
+    .register__checkbox:checked ~ & {
+      background-image: url(../../img/icon-checked.svg);
+    }
+  }
+}

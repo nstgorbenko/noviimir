@@ -18,6 +18,18 @@
     list-style: none;
 }
 
+@mixin button-reset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
 @mixin pseudo($width, $height, $content: "") {
     content: $content;
     position: absolute;

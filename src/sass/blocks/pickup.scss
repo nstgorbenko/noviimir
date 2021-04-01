@@ -1,0 +1,87 @@
+.pickup {
+  display: flex;
+  justify-content: space-between;
+  width: 812px;
+  padding: 36px 36px 30px;
+  background: $white;
+  box-shadow: 0px 5px 10px rgba($black, 0.15);
+  border-radius: 10px;
+}
+
+.pickup__address {
+  @include reset();
+  @include font(20px, 26px, 400);
+  color: $color-text;
+}
+
+.pickup__list {
+  @include list-reset();
+  margin-top: 4px;
+}
+
+.pickup__item {
+  @include font(14px, 20px, 400);
+  margin-top: 21px;
+  padding-left: 34px;
+  color: $color-text-light;
+
+  &--time {
+    background: url("../../img/icon-time.svg") no-repeat;
+  }
+
+  &--info {
+    background: url("../../img/icon-info.svg") no-repeat;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.pickup__button {
+  margin-top: 28px;
+  padding: 11px 22px;
+}
+
+.pickup__image-link {
+  display: block;
+  margin-top: 55px;
+  cursor: zoom-in;
+}
+
+.pickup__image {
+  border-radius: 6px;
+  outline: none;
+}
+
+.pickup__full-image {
+  position: fixed;
+  display: none;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  max-width: 90%;
+  max-height: 90%;
+  margin: auto;
+  border-radius: 6px;
+  cursor: zoom-out;
+
+  .pickup__image:focus ~ & {
+    display: block;
+  }
+}
+
+.pickup__image-caption {
+  @include reset();
+  @include font(12px, 20px, 300);
+  margin-top: 5px;
+  color: $color-text-light;
+}
+
+.pickup__map {
+  border-radius: 8px;
+}

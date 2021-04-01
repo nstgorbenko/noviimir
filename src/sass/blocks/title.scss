@@ -1,0 +1,13 @@
+.title {
+  @include reset();
+  color: $color-text;
+
+  &--h1 {
+    @include font(34px, 36px, 600);
+    font-family: "Source Sans Pro", sans-serif;
+  }
+
+  &--h2 {
+    @include font(24px, 28px, 500);
+  }
+}
