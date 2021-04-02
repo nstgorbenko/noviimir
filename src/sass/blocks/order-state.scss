@@ -1,0 +1,51 @@
+.order-state {
+  padding: 54px;
+  border-color: $white;
+  box-shadow: 0 5px 10px rgba($black, 0.15);
+  border-radius: 10px;
+}
+
+.order-state__info {
+  @include list-reset();
+  display: flex;
+  justify-content: space-between;
+  margin-top: 31px;
+}
+
+.order-state__info-text {
+  @include reset();
+  @include font(16px, 20px, 400);
+  margin-top: 20px;
+  color: $color-text;
+}
+
+.order-state__info-caption {
+  @include reset();
+  @include font(14px, 20px, 400);
+  margin-top: 4px;
+  color: $color-text-lighter;
+}
+
+.order-state__image {
+  margin-top: 4px;
+}
+
+.order-state__sum {
+  @include font(24px, 32px, 600);
+  font-family: "Source Sans Pro", sans-serif;
+  color: $color-button;
+}
+
+.order-state__footer {
+  margin-top: 40px;
+  padding-top: 7px;
+  border-top: 1px solid $color-line;
+}
+
+.order-state__footer-text {
+  @include reset();
+  @include font(14px, 22px, 400);
+  width: 650px;
+  margin-top: 11px;
+  color: $color-text-light;
+}

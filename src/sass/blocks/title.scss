@@ -10,4 +10,8 @@
   &--h2 {
     @include font(24px, 28px, 500);
   }
+
+  &--h3 {
+    @include font(20px, 23px, 500);
+  }
 }

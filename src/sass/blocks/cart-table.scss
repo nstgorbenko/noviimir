@@ -1,0 +1,85 @@
+.cart-table {
+  margin-top: 27px;
+}
+
+.cart-table__row {
+  @include font(16px, 20px, 400);
+  display: flex;
+  margin-top: 24px;
+  color: $color-text;
+
+  &--title {
+    @include font(14px, 20px, 400);
+    color: $color-text-lighter;
+    padding-bottom: 14px;
+    border-bottom: 1px solid $color-line;
+  }
+}
+
+.cart-table__cell {
+
+  &:nth-child(1) {
+    width: 69%;
+  }
+
+  &:nth-child(2) {
+    width: 7%;
+    text-align: right;
+  }
+
+  &:nth-child(3) {
+    width: 12%;
+    text-align: right;
+  }
+
+  &:nth-child(4) {
+    width: 12%;
+    text-align: right;
+  }
+}
+
+.cart-table__total {
+  display: flex;
+  flex-direction: column;
+  margin-top: 28px;
+  border-top: 1px solid $color-line;
+}
+
+.cart-table__total-part {
+  width: 310px;
+  align-self: flex-end;
+  margin-top: 12px;
+
+  &--total {
+    margin-top: 20px;
+  }
+}
+
+.cart-table__total-item {
+  @include reset();
+  @include font(16px, 19px, 400);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  color: $color-text;
+
+  &--total {
+    @include font(16px, 20px, 500);
+  }
+
+  &--prepay {
+    @include font(14px, 20px, 400);
+    color: $color-text-lighter;
+  }
+}
+
+.cart-table__total-count {
+  .cart-table__total-item--cost & {
+    @include font(16px, 19px, 500);
+  }
+
+  .cart-table__total-item--total & {
+    @include font(20px, 20px, 500);
+    color: $color-button;
+  }
+}

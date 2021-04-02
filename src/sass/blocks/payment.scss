@@ -1,0 +1,57 @@
+.payment {
+  margin: 48px 0 120px;
+}
+
+.payment__data {
+  margin-top: 26px;
+}
+
+.payment__info {
+  @include reset();
+  @include font(14px, 20px, 400);
+  margin-top: 16px;
+  color: $color-text-lighter;
+}
+
+.payment__info-text {
+  @include font(16px, 20px, 400);
+  color: $color-text;
+}
+
+.payment__system {
+  margin-top: 40px;
+}
+
+.payment__user {
+  @include reset();
+  @include font(16px, 20px, 400);
+  margin-top: 22px;
+  color: $color-text;
+}
+
+.payment__link {
+  @include reset();
+  @include font(16px, 20px, 400);
+  display: block;
+  margin-top: 22px;
+  color: $color-link;
+  text-decoration: underline;
+}
+
+.payment__order-state {
+  margin-top: 60px;
+}
+
+.payment__order-info {
+  margin-top: 50px;
+}
+
+.payment__order-content {
+  margin-top: 40px;
+}
+
+.payment__button {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 13px 36px;
+}

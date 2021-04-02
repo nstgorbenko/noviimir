@@ -1,0 +1,51 @@
+doctype html
+html(lang="ru")
+
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="./css/style.css")
+    title Новый мир. Заказ оформлен
+
+  body.page
+    header.page-header
+      .page__container
+        a.page-header__logo-link(href="#")
+          img.page-header__logo-image(width="223" height="72" src="img/icon-logo.svg" alt="Логотип компании Новый мир")
+
+    main.page-main
+      .page__container
+        .breadcrumbs.page-main__breadcrumbs
+          a.breadcrumbs__link(href="#")
+            svg.breadcrumbs__icon(width="6", height="12")
+              use(xlink:href="img/sprite.svg#icon-arrow-breadcrumb")
+            | Главная
+
+        section.payment
+          h1.title.title--h1 Заказ оформлен
+          .payment__data
+            p.payment__info Ваш заказ:
+              = ' '
+              span.payment__info-text № 6797677
+            p.payment__info Статус заказа:
+              = ' '
+              span.payment__info-text Передан на обработку
+          .payment__system
+            img.payment__image(width="603" height="524" src="img/payment-stub.png" alt="Заглушка")
+          p.payment__user Покупатель: +7 900 967 77 00, obrazec@rambler.ru
+          a.payment__link(href="#") Оплатить позже
+
+
+
+    footer.page-footer
+      .page-footer__content.page__container
+        p.page-footer__copyright 2021 © «Новый мир»
+        p.page-footer__pay
+          img.page-footer__pay-image(width="272" height="48" src="img/icon-cards-pale.svg" alt="Способы оплаты")
+        p.page-footer__privacy
+          a.page-footer__privacy-link(href="#") Политика конфиденциальности
+
+    script(src="js/index.js" type="module")
+
+    .svg-library
+      include ../img/sprite.svg

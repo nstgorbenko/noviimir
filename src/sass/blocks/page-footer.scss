@@ -1,0 +1,27 @@
+.page-footer {
+  margin-top: auto;
+  background-color: $color-footer;
+}
+
+.page-footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.page-footer__copyright {
+  @include reset();
+  @include font(12px, 20px, 400);
+  color: $color-text-light;
+}
+
+.page-footer__privacy {
+  @include reset();
+  @include font(12px, 20px, 400);
+  color: $color-text-light;
+}
+
+.page-footer__privacy-link {
+  @include link-reset();
+}
