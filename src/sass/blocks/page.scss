@@ -6,6 +6,15 @@
 }
 
 .page__container {
-  width: 1232px;
+  width: 1312px;
+  padding: 0 40px;
   margin: 0 auto;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 16px;
+  }
 }

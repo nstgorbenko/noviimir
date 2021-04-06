@@ -5,11 +5,16 @@
   background-color: $color-button;
   border: 1px solid $color-button;
   border-radius: 6px;
+  text-align: center;
   transition: $main-transition;
 
-  &:hover,
-  &:focus {
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
     background-color: $color-button-hover;
+  }
+
+  &:disabled {
+    opacity: 50%;
   }
 
   &--clear {
@@ -17,8 +22,8 @@
     background-color: $white;
     border: 1px solid $color-checkbox;
 
-    &:hover,
-    &:focus {
+    &:not(:disabled):hover,
+    &:not(:disabled):focus {
       background-color: rgba($color-text-lighter, 0.2);
     }
   }
@@ -26,5 +31,24 @@
   &--with-input {
     margin-left: -28px;
     padding: 14px 29px;
+
+    @media (max-width: $tablet-width-min) {
+      font-size: 0;
+      background-image: url("../img/icon-arrow-right.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+  }
+
+  &--min {
+    margin-left: -50px;
+    padding: 0;
+    width: 50px;
+  }
+
+  &--next {
+    background-image: url("../img/icon-arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
   }
 }

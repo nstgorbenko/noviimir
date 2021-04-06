@@ -1,5 +1,5 @@
 .payment {
-  margin: 48px 0 120px;
+  margin: 48px 0 350px;
 }
 
 .payment__data {
@@ -54,4 +54,19 @@
   display: inline-block;
   margin-top: 40px;
   padding: 13px 36px;
+}
+
+.payment__note {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.payment__note-button {
+  @include button-reset();
+  @include font(16px, 16px, 400);
+  margin-top: 11px;
+  color: $color-link;
+  text-decoration: underline;
 }

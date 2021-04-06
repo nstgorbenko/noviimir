@@ -1,0 +1,175 @@
+doctype html
+html(lang="ru")
+
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="./css/style.css")
+    title Новый мир. Оформление заказа
+
+  body.page
+    header.page-header
+      .page__container
+        a.page-header__logo-link(href="#")
+          img.page-header__logo-image(width="223" height="72" src="img/icon-logo.svg" alt="Логотип компании Новый мир")
+
+    main.page-main
+      .page__container
+        .breadcrumbs.page-main__breadcrumbs
+          a.breadcrumbs__link(href="#")
+            svg.breadcrumbs__icon(width="6", height="12")
+              use(xlink:href="img/sprite.svg#icon-arrow-breadcrumb")
+            | Вернуться в корзину
+
+        section.order
+          .order__process
+            h1.title.title--h1 Оформление заказа
+
+            .order__part.register
+              h2.title.title--h2.order__part-title Введите SMS-код
+              p.register__user-data Номер получателя: +7 900 967 77 00
+
+              p.input-field.register__field
+                input.input.input--with-button(type="text", name="sms-code" placeholder="Код из SMS")
+                button.button.button--with-input.button--min.button--next(type="button")
+              p.input__caption Отправить повторно, через 115 сек.
+
+            .order__part.city
+              h2.title.title--h2.order__part-title
+                span.order__part-number 1.
+                = " "
+                | Ваш город
+              input.input.city__input(type="text", name="order-city" placeholder="Ваш город", required)
+
+            .order__part.receive-way
+              h2.title.title--h2.order__part-title
+                span.order__part-number 2.
+                = " "
+                | Выберите способ получения
+              p.receive-way__place В г. Краснодар
+              ul.pick-list
+                li.pick-list__item
+                  input#pickup.pick-list__item-checkbox.visually-hidden(type="radio", name="receive-way", value="pickup", checked)
+                  label.pick-list__item-box(for="pickup")
+                    span.pick-list__name.pick-list__name--pickup Самовывоз из магазина
+                    span.pick-list__text Сегодня, Бесплатно
+                li.pick-list__item
+                  input#delivery.pick-list__item-checkbox.visually-hidden(type="radio", name="receive-way", value="delivery")
+                  label.pick-list__item-box(for="delivery")
+                    span.pick-list__name.pick-list__name--delivery Доставка
+                    span.pick-list__text Курьером до двери
+              .pickup.receive-way__pickup
+                .pickup__parts-wrap
+                  .pickup__part
+                    p.pickup__title г. Краснодар, ул. Крупской, 280
+                    ul.pickup__list
+                      li.pickup__item.pickup__item--time Часы работы:
+                        span 9.00 - 19.00 без перерывов и выходных
+                      li.pickup__item.pickup__item--info Можно забрать через 15
+                        span минут или в течении 14 дней
+                    .pickup__container
+                      button.button.button--clear.pickup__button Изменить магазин
+                  .pickup__part
+                    a.pickup__image-link
+                      img.pickup__image(width="155" height="108" src="img/shop.jpg" alt="г. Краснодар, ул. Крупской, 280", tabindex="0")
+                      p.pickup__image-caption Кликните, чтобы увеличить
+                      img.pickup__full-image(width="155" height="108" src="img/shop.jpg" alt="г. Краснодар, ул. Крупской, 280")
+                  .pickup__part
+                    iframe.pickup__map(src="https://yandex.ru/map-widget/v1/-/CCUURDUQxA" width="210" height="218" frameborder="0")
+
+            .order__part.pay-way
+              h2.title.title--h2.order__part-title
+                span.order__part-number 3.
+                = " "
+                | Выберите способ оплаты
+              ul.pick-list.pick-list--checkbox
+                li.pick-list__item
+                  input#card.pick-list__item-checkbox.visually-hidden(type="radio", name="pay-way", value="card", checked)
+                  label.pick-list__item-box(for="card")
+                    span.pick-list__name Банковская карта
+                    img.pick-list__image(width="209" height="22" src="img/icon-cards.svg" alt="Способы оплаты")
+                    span.pick-list__text Комиссия 0%, самый безопасный способ
+                li.pick-list__item
+                  input#cash.pick-list__item-checkbox.visually-hidden(type="radio", name="pay-way", value="cash")
+                  label.pick-list__item-box(for="cash")
+                    span.pick-list__name При получении
+                    span.pick-list__text Оплата наличными или банковской картой
+                li.pick-list__item
+                  input#account.pick-list__item-checkbox.visually-hidden(type="radio", name="pay-way", value="account")
+                  label.pick-list__item-box(for="account")
+                    span.pick-list__name Банковский счет
+                    span.pick-list__text Оплата через р/с для юр. лиц
+
+            .order__part.user-data
+              h2.title.title--h2.order__part-title
+                span.order__part-number 4.
+                = " "
+                | Данные покупателя
+              .user-data__info
+                p.user-data__field
+                  input.input(type="tel", name="tel" placeholder="Телефон", required)
+                p.user-data__field
+                  input.input(type="email", name="email" placeholder="E-mail (необязательно)")
+                p.user-data__field
+                  textarea.input(name="comment" placeholder="Коментарий к заказу", rows="4")
+
+            .order__part
+              .promocode.order__part-promocode
+                input#promocode-field.promocode__checkbox.visually-hidden(type="checkbox", name="promocode-field")
+                label.promocode__button(for="promocode-field")
+                  span.promocode__text Промокод
+                  span.promocode__text.promocode__text--show Введите промокод
+                p.input-field.promocode__field
+                  input.input.input--with-button(type="text", name="promocode" placeholder="Промокод")
+                  button.button.button--with-input.button--min.button--next(type="button")
+
+          .order__info
+            .order-card
+              p.title.title--h2.order-card__title
+                | Ваш заказ
+                span.order-card__number № 6797677
+              .order-card__part
+                p.order-card__line Товары (4)
+                  span 2 961 ₽
+                p.order-card__line Доставка
+                  span 400 ₽
+              .order-card__part
+                p.order-card__line.order-card__line--total Итого
+                  span 3 361 ₽
+                p.order-card__line.order-card__line--prepay Предоплата
+                  span 0 ₽
+              .order-card__part
+                button.button.order-card__button(type="submit", disabled) Подтвердить заказ
+                p.order-card__button-caption Нажимая на кнопку «Перейти к оплате», Вы соглашаетесь на 
+                  a(href="#" target="_blank") обработку персональных данных
+
+            .order-feature
+              ul.order-feature__list
+                li.order-feature__item.order-feature__item--help
+                  p.order-feature__name Нужна помощь?
+                    span
+                      = " "
+                      br
+                      a.order-feature__name-link(href="tel:88003333342") 8 (800) 222-23-42
+                      = " "
+                      | (c 09:00 до 18:00)
+                  p.order-feature__text без перерыва и выходных
+                li.order-feature__item.order-feature__item--safe
+                  p.order-feature__name Безопасная оплата
+                  p.order-feature__text оплата через процессинг ОАО "Сбербанк России"
+                li.order-feature__item.order-feature__item--guaranty
+                  p.order-feature__name Гарантия доставки
+                  p.order-feature__text работаем с службой курьерской доставки СДЭК
+
+    footer.page-footer
+      .page-footer__content.page__container
+        p.page-footer__copyright 2021 © «Новый мир»
+        p.page-footer__pay
+          img.page-footer__pay-image(width="272" height="48" src="img/icon-cards-pale.svg" alt="Способы оплаты")
+        p.page-footer__privacy
+          a.page-footer__privacy-link(href="#") Политика конфиденциальности
+
+    script(src="js/index.js" type="module")
+
+    .svg-library
+      include ../img/sprite.svg

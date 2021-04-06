@@ -19,9 +19,15 @@
   color: $color-text;
 }
 
+.order-state__info-name {
+  @include font(14px, 20px, 400);
+  color: $color-text-lighter;
+}
+
 .order-state__info-caption {
   @include reset();
   @include font(14px, 20px, 400);
+  width: 185px;
   margin-top: 4px;
   color: $color-text-lighter;
 }
@@ -48,4 +54,17 @@
   width: 650px;
   margin-top: 11px;
   color: $color-text-light;
+
+  &--dark {
+    color: $color-text;
+  }
+
+  &--light {
+    color: $color-text-lighter;
+  }
+}
+
+.order-state__footer-link {
+  color: $color-input-hover;
+  text-decoration: underline;
 }

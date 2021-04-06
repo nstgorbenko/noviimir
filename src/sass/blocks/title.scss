@@ -5,10 +5,19 @@
   &--h1 {
     @include font(34px, 36px, 600);
     font-family: "Source Sans Pro", sans-serif;
+
+    @media (max-width: $mobile-width) {
+      @include font(28px, 36px, 600);
+      font-family: "Source Sans Pro", sans-serif;
+    }
   }
 
   &--h2 {
     @include font(24px, 28px, 500);
+
+    @media (max-width: $mobile-width) {
+      @include font(22px, 26px, 500);
+    }
   }
 
   &--h3 {

@@ -1,29 +1,65 @@
 .pickup {
-  display: flex;
-  justify-content: space-between;
   width: 812px;
   padding: 36px 36px 30px;
   background: $white;
   box-shadow: 0 5px 10px rgba($black, 0.15);
   border-radius: 10px;
+
+  @media (max-width: $tablet-width-min) {
+    width: 100%;
+  }
 }
 
-.pickup__address {
+.pickup__parts-wrap {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $tablet-width-min) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+.pickup__part {
+  @media (max-width: $tablet-width-min) {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.pickup__title {
   @include reset();
   @include font(20px, 26px, 400);
   color: $color-text;
+
+  &:not(:first-child) {
+    margin-top: 14px;
+  }
 }
 
 .pickup__list {
   @include list-reset();
-  margin-top: 4px;
+
+  &:not(:first-child) {
+    margin-top: 21px;
+  }
+
+  &:last-child {
+    margin-bottom: 19px;
+  }
 }
 
 .pickup__item {
   @include font(14px, 20px, 400);
-  margin-top: 21px;
   padding-left: 34px;
   color: $color-text-light;
+
+  &:not(:first-child) {
+    margin-top: 21px;
+  }
 
   &--time {
     background: url("../../img/icon-time.svg") no-repeat;
@@ -39,8 +75,12 @@
 }
 
 .pickup__button {
-  margin-top: 28px;
+  min-width: 169px;
   padding: 11px 22px;
+
+  &:not(:nth-child(n+2)) {
+    margin-top: 28px;
+  }
 }
 
 .pickup__image-link {
@@ -84,4 +124,37 @@
 
 .pickup__map {
   border-radius: 8px;
+
+  @media (max-width: $tablet-width-min) {
+    width: 100%;
+  }
+}
+
+.pickup__point {
+  margin: 40px -26px -25px;
+}
+
+.pickup__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pickup__address {
+  @include reset();
+  @include font(16px, 21px, 400);
+  color: $color-text;
+}
+
+.pickup__info {
+  width: 660px;
+}
+
+.pickup__field {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.pickup__delivery-map {
+  margin-top: 23px;
 }

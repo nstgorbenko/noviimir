@@ -1,0 +1,47 @@
+.order-feature {
+  width: 350px;
+  margin-top: 22px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 0;
+    margin-right: 30px;
+  }
+}
+
+.order-feature__list {
+  @include list-reset();
+}
+
+.order-feature__item {
+  margin-top: 22px;
+  padding-left: 34px;
+
+  &--help {
+    background: url("../../img/icon-message.svg") no-repeat;
+  }
+
+  &--safe {
+    background: url("../../img/icon-pocket.svg") no-repeat;
+  }
+
+  &--guaranty {
+    background: url("../../img/icon-truck.svg") no-repeat;
+  }
+}
+
+.order-feature__name {
+  @include reset();
+  @include font(16px, 24px, 400);
+  color: $color-text;
+}
+
+.order-feature__name-link {
+  @include link-reset();
+}
+
+.order-feature__text {
+  @include reset();
+  @include font(12px, 14px, 400);
+  margin-top: 10px;
+  color: $color-text-lighter;
+}

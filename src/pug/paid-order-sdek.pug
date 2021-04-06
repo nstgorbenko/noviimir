@@ -37,12 +37,12 @@ html(lang="ru")
                 img.order-state__image(width="208" height="22" src="img/icon-cards.svg" alt="Оплата банковской картой")
               li.order-state__item
                 h3.title.title--h3 Сумма заказа:
-                  = ' '
-                  span.order-state__sum 11 700 ₽
+                  = " "
+                  span.order-state__sum 13 130 ₽
             .order-state__footer
               p.order-state__footer-text В ближайшее время Вам перезвонит наш менеджер и обговорит с Вами все условия получения или доставки Вашего заказа.
               p.order-state__footer-text Пожалуйста, назовите менеджеру номер Вашего заказа -
-                = ' '
+                = " "
                 span 6797677
 
           section.order-info.payment__order-info
@@ -52,15 +52,19 @@ html(lang="ru")
                 h3.title.title--h3 Данные покупателя
                 p.order-state__info-text
                   span.order-state__info-name Телефон:
-                  |
+                  = " "
                   | +7 900 967 77 00
                 p.order-state__info-text
                   span.order-state__info-name E-mail:
-                  |
+                  = " "
                   | obrazec@rambler.ru
               li.order-state__item
                 h3.title.title--h3 Способ получения
-                p.order-state__info-text Самовывоз из магазина
+                p.order-state__info-text Доставка СДЭК
+                p.order-state__info-text
+                  span.order-state__info-name Стоимость доставки:
+                  = " "
+                  | 1 430 ₽
               li.order-state__item
                 h3.title.title--h3 Адрес получения
                 p.order-state__info-text г. Кемерово, ул. Снесарева, 2
@@ -93,10 +97,10 @@ html(lang="ru")
                   p.cart-table__total-item.cart-table__total-item--cost Товары (6)
                     span.cart-table__total-count 11 700 ₽
                   p.cart-table__total-item Доставка
-                    span.cart-table__total-count 0 ₽
+                    span.cart-table__total-count 1 430 ₽
                 .cart-table__total-part.cart-table__total-part--total
                   p.cart-table__total-item.cart-table__total-item--total Итого
-                    span.cart-table__total-count 11 700 ₽
+                    span.cart-table__total-count 13 130 ₽
                   p.cart-table__total-item.cart-table__total-item--prepay Предоплата
                     span.cart-table__total-count 0 ₽
 

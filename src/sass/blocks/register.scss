@@ -1,19 +1,25 @@
 .register__field {
   @include reset();
-  display: flex;
   position: relative;
   margin-top: 24px;
 }
 
 .register__join {
   margin-top: 22px;
+
+  @media (max-width: $mobile-width) {
+    width: 70%;
+    margin-top: 20px;
+  }
 }
 
 .register__checkbox-label {
   @include font(14px, 20px, 400);
+  display: block;
   position: relative;
   padding-left: 27px;
   color: $color-text-light;
+  cursor: pointer;
 
   &:before {
     @include pseudo(21px, 21px);
@@ -25,4 +31,14 @@
       background-image: url(../../img/icon-checked.svg);
     }
   }
+}
+
+.register__user {
+  @include reset();
+  @include font(20px, 23px, 500);
+  margin-top: 28px;
+}
+
+.register__user-data {
+  @include font(16px, 19px, 400);
 }

@@ -1,0 +1,102 @@
+.pick-list {
+  @include list-reset();
+  display: flex;
+  margin-top: 27px;
+
+  @media (max-width: $tablet-width-min) {
+    flex-wrap: wrap;
+    margin-top: 21px;
+  }
+}
+
+.pick-list__item {
+  display: flex;
+  margin-right: 16px;
+
+  @media (max-width: $tablet-width-min) {
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-grow: 1;
+    margin-right: 0;
+  }
+}
+
+.pick-list__item-box {
+  display: block;
+  width: 260px;
+  padding: 18px 14px 20px;
+  background-color: $white;
+  border-radius: 4px;
+  border: 1.5px solid transparent;
+  box-shadow: 0 5px 10px rgba($color-text-light, 0.27);
+  cursor: pointer;
+  transition: $main-transition;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+
+  .pick-list__item-checkbox:checked ~ & {
+    border: 1.5px solid $color-active;
+  }
+}
+
+.pick-list__name {
+  @include reset();
+  @include font(16px, 20px, 400);
+  display: block;
+  position: relative;
+  padding-left: 28px;
+  color: $color-text;
+
+  @media (max-width: $mobile-width) {
+    @include font(14px, 16px, 400);
+  }
+
+  &--pickup {
+    background: url("../../img/icon-pickup.svg") no-repeat;
+  }
+
+  &--delivery {
+    background: url("../../img/icon-delivery.svg") no-repeat;
+  }
+
+  &::before {
+    .pick-list--checkbox & {
+      @include pseudo(6px, 6px);
+      position: absolute;
+      top: 7px;
+      left: 5px;
+      background-color: $color-text-lighter;
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px $white, 0 0 0 5px $color-text-lighter;
+      transition: $main-transition;
+      cursor: pointer;
+    }
+
+    .pick-list--checkbox .pick-list__item-checkbox:checked ~ .pick-list__item-box & {
+      background-color: $white;
+      box-shadow: 0 0 0 5px $color-active;
+    }
+  }
+}
+
+.pick-list__image {
+  margin-top: 8px;
+}
+
+.pick-list__text {
+  @include reset();
+  @include font(14px, 20px, 400);
+  display: block;
+  width: 70%;
+  margin-top: 8px;
+  color: $color-text-lighter;
+
+  @media (max-width: $mobile-width) {
+    @include font(12px, 16px, 400);
+    margin-top: 8px;
+  }
+}

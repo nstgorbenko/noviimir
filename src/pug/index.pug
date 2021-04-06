@@ -1,0 +1,78 @@
+doctype html
+html(lang="ru")
+
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="./css/style.css")
+    title Новый мир. Все страницы
+
+  body.page
+    header.page-header
+      .page__container
+        a.page-header__logo-link(href="#")
+          img.page-header__logo-image(width="223" height="72" src="img/icon-logo.svg" alt="Логотип компании Новый мир")
+
+    main.page-main
+      .page__container
+        ul
+          li Оформление заказа
+            ul
+              li
+                a(href='order.html', target="_blank") order.html ---- Войти или зарегистрироваться
+              li
+                a(href='order-registered-user.html', target="_blank") order-registered-user.html ---- Зарегистрированный пользователь
+              li
+                a(href='order-sms-code.html', target="_blank") order-sms-code.html ---- Код из СМС
+              li
+                a(href='order-email-code.html', target="_blank") order-email-code.html ---- Код из e-mail
+          li 1 — 2 шаг
+            ul
+              li
+                a(href='order.html', target="_blank") order.html ---- Самовывоз из магазина
+              li
+                a(href='order-sdek-less-2000.html', target="_blank") order-sdek-less-2000.html ---- Самовывоз СДЭК (до 2000 руб)
+              li
+                a(href='order-sdek-more-2000.html', target="_blank") order-sdek-more-2000.html ---- Самовывоз СДЭК (более 2000 руб)
+              li
+                a(href='order-sdek-chosen.html', target="_blank") order-sdek-chosen.html ---- СДЭК выбранный пункт
+              li
+                a(href='order-delivery-less-2000.html', target="_blank") order-delivery-less-2000.html ---- Доставка (до 2000 руб)
+              li
+                a(href='order-delivery-more-2000.html', target="_blank") order-delivery-more-2000.html ---- Доставка (более 2000 руб)
+          li 3 — 4 шаг
+            ul
+              li
+                a(href='order.html', target="_blank") order.html ---- Физическое лицо (банковская карта)
+              li
+                a(href='order.html', target="_blank") order.html ---- Физическое лицо (при выборе: При получении до 2 000 руб)
+              li
+                a(href='order-private-more-2000.html', target="_blank") order-private-more-2000.html ---- Физическое лицо (при выборе: При получении более 2 000 руб)
+              li
+                a(href='order-legal.html', target="_blank") order-legal.html ---- Юридическое лицо (при выборе: Банковский счет)
+          li Оплата заказа
+            ul
+              li
+                a(href='payment.html', target="_blank") payment.html ---- Оплата заказа (при выборе оплаты онлайн)
+              li
+                a(href='paid-order-pickup.html', target="_blank") paid-order-pickup.html ---- Заказ оплачен (при выборе оплаты онлайн. Способ получения - самовывоз из магазина)
+              li
+                a(href='paid-order-sdek.html', target="_blank") paid-order-sdek.html ---- Заказ оплачен (при выборе оплаты онлайн. Способ получения - доставка СДЭК)
+              li
+                a(href='paid-order-courier.html', target="_blank") paid-order-courier.html ---- Заказ оплачен (при выборе оплаты онлайн. Способ получения - доставка курьером)
+              li
+                a(href='paid-order-prepay.html', target="_blank") paid-order-prepay.html ---- Предоплата доставки (при выборе СДЭК более 2000 руб)
+              li
+                a(href='payment-on-delivery-sdek.html', target="_blank") payment-on-delivery-sdek.html ---- Оплата при получении (при выборе СДЭК)
+              li
+                a(href='payment-on-delivery-courier.html', target="_blank") payment-on-delivery-courier.html ---- Оплата при получении (курьером)
+              li
+                a(href='payment-on-delivery-pickup.html', target="_blank") payment-on-delivery-pickup.html ---- Оплата при получении (самовывоз из магазина)
+          li Личный кабинет
+            ul
+              li
+                a(href='account-register.html', target="_blank") account-register.html ---- Личный кабинет (Регистрация)
+              li
+                a(href='account-login.html', target="_blank") account-login.html ---- Личный кабинет (Авторизация)
+              li
+                a(href='account-popup.html', target="_blank") account-popup.html ---- Попап (зайти или зарегистрироваться)

@@ -1,0 +1,120 @@
+doctype html
+html(lang="ru")
+
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="./css/style.css")
+    title Новый мир. Заказ оформлен
+
+  body.page
+    header.page-header
+      .page__container
+        a.page-header__logo-link(href="#")
+          img.page-header__logo-image(width="223" height="72" src="img/icon-logo.svg" alt="Логотип компании Новый мир")
+
+    main.page-main
+      .page__container
+        .breadcrumbs.page-main__breadcrumbs
+          a.breadcrumbs__link(href="#")
+            svg.breadcrumbs__icon(width="6", height="12")
+              use(xlink:href="img/sprite.svg#icon-arrow-breadcrumb")
+            | Главная
+
+        section.payment
+          h1.title.title--h1 Заказ оформлен № 6797677
+
+          section.order-state.payment__order-state
+            h2.title.title--h2 Заказ № 6797677
+            ul.order-state__info
+              li.order-state__item
+                h3.title.title--h3 Статус заказа
+                p.order-state__info-text Оплачен
+                p.order-state__info-caption Можете забрать в магазине
+              li.order-state__item
+                h3.title.title--h3 Способ оплаты
+                p.order-state__info-text Банковская карта
+                img.order-state__image(width="208" height="22" src="img/icon-cards.svg" alt="Оплата банковской картой")
+              li.order-state__item
+                h3.title.title--h3 Сумма заказа:
+                  = " "
+                  span.order-state__sum 12 800 ₽
+            .order-state__footer
+              p.order-state__footer-text В ближайшее время Вам перезвонит наш менеджер и обговорит с Вами все условия получения или доставки Вашего заказа.
+              p.order-state__footer-text Пожалуйста, назовите менеджеру номер Вашего заказа -
+                = " "
+                span 6797677
+
+          section.order-info.payment__order-info
+            h2.title.title--h2 Информация о заказе
+            ul.order-state__info
+              li.order-state__item
+                h3.title.title--h3 Данные покупателя
+                p.order-state__info-text
+                  span.order-state__info-name Телефон:
+                  = " "
+                  | +7 900 967 77 00
+                p.order-state__info-text
+                  span.order-state__info-name E-mail:
+                  = " "
+                  | obrazec@rambler.ru
+              li.order-state__item
+                h3.title.title--h3 Способ получения
+                p.order-state__info-text Доставка курьером до двери
+                p.order-state__info-text
+                  span.order-state__info-name Стоимость доставки:
+                  = " "
+                  | 1 100 ₽
+              li.order-state__item
+                h3.title.title--h3 Адрес получения
+                p.order-state__info-text г. Кемерово, ул. Снесарева, 2
+
+          section.order-content.payment__order-content
+            h2.title.title--h2 Состав заказа:
+            .cart-table
+              .cart-table__row.cart-table__row--title
+                .cart-table__cell Товар
+                .cart-table__cell Количество
+                .cart-table__cell Цена
+                .cart-table__cell Сумма
+              .cart-table__row
+                .cart-table__cell 9068-22 (Р) Обои Eurodecor Samui 1,06*10 м
+                .cart-table__cell 2 шт.
+                .cart-table__cell 1 950 ₽
+                .cart-table__cell 3 900 ₽
+              .cart-table__row
+                .cart-table__cell 9068-22 (Р) Обои Eurodecor Samui 1,06*10 м
+                .cart-table__cell 2 шт.
+                .cart-table__cell 1 950 ₽
+                .cart-table__cell 3 900 ₽
+              .cart-table__row
+                .cart-table__cell 9068-22 (Р) Обои Eurodecor Samui 1,06*10 м
+                .cart-table__cell 2 шт.
+                .cart-table__cell 1 950 ₽
+                .cart-table__cell 3 900 ₽
+              .cart-table__total
+                .cart-table__total-part
+                  p.cart-table__total-item.cart-table__total-item--cost Товары (6)
+                    span.cart-table__total-count 11 700 ₽
+                  p.cart-table__total-item Доставка
+                    span.cart-table__total-count 1 430 ₽
+                .cart-table__total-part.cart-table__total-part--total
+                  p.cart-table__total-item.cart-table__total-item--total Итого
+                    span.cart-table__total-count 12 800 ₽
+                  p.cart-table__total-item.cart-table__total-item--prepay Предоплата
+                    span.cart-table__total-count 0 ₽
+
+          a.button.payment__button Продолжить покупки
+
+    footer.page-footer
+      .page-footer__content.page__container
+        p.page-footer__copyright 2021 © «Новый мир»
+        p.page-footer__pay
+          img.page-footer__pay-image(width="272" height="48" src="img/icon-cards-pale.svg" alt="Способы оплаты")
+        p.page-footer__privacy
+          a.page-footer__privacy-link(href="#") Политика конфиденциальности
+
+    script(src="js/index.js" type="module")
+
+    .svg-library
+      include ../img/sprite.svg

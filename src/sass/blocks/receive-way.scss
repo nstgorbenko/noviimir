@@ -6,56 +6,6 @@
   text-decoration: underline;
 }
 
-.receive-way__list {
-  @include list-reset();
-  display: flex;
-  margin-top: 27px;
-}
-
-.receive-way__item {
-  margin-right: 16px;
-}
-
-.receive-way__item-box {
-  display: block;
-  width: 260px;
-  padding: 18px 14px 20px;
-  background-color: $white;
-  border-radius: 4px;
-  border: 1.5px solid transparent;
-  box-shadow: 0 5px 10px rgba($color-text-light, 0.27);
-  cursor: pointer;
-  transition: $main-transition;
-
-  .receive-way__item-checkbox:checked ~ & {
-    border: 1.5px solid $color-active;
-  }
-}
-
-.receive-way__name {
-  @include reset();
-  @include font(16px, 20px, 400);
-  display: block;
-  padding-left: 28px;
-  color: $color-text;
-
-  &--pickup {
-    background: url("../../img/icon-pickup.svg") no-repeat;
-  }
-
-  &--delivery {
-    background: url("../../img/icon-delivery.svg") no-repeat;
-  }
-}
-
-.receive-way__time {
-  @include reset();
-  @include font(14px, 20px, 400);
-  display: block;
-  margin-top: 8px;
-  color: $color-text-lighter;
-}
-
 .receive-way__pickup {
   margin-top: 23px;
 }

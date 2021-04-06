@@ -21,7 +21,7 @@
             <h1 class="title title--h1">Оформление заказа</h1>
             <div class="order__part register">
               <h2 class="title title--h2 order__part-title">Войти или зарегистрироваться</h2>
-              <div class="register__field">
+              <div class="input-field register__field">
                 <input class="input input--with-button" type="text" name="register-data" placeholder="Телефон или e-mail" required>
                 <button class="button button--with-input" type="button">Получить код</button>
                 <button class="input__button" type="button" aria-label="Узнать формат данных">
@@ -41,84 +41,91 @@
               </p>
             </div>
             <div class="order__part city">
-              <h2 class="title title--h2 order__part-title"><span class="order__part-number">1.</span>
-                Ваш город
+              <h2 class="title title--h2 order__part-title"><span class="order__part-number">1.</span> Ваш город
               </h2>
               <input class="input city__input" type="text" name="order-city" placeholder="Ваш город" required>
             </div>
             <div class="order__part receive-way">
-              <h2 class="title title--h2 order__part-title"><span class="order__part-number">2.</span>
-                Выберите способ получения
+              <h2 class="title title--h2 order__part-title"><span class="order__part-number">2.</span> Выберите способ получения
               </h2>
               <p class="receive-way__place">В г. Краснодар</p>
-              <ul class="receive-way__list">
-                <li class="receive-way__item">
-                  <input class="receive-way__item-checkbox visually-hidden" id="pickup" type="radio" name="receive-way" value="pickup" checked>
-                  <label class="receive-way__item-box" for="pickup"><span class="receive-way__name receive-way__name--pickup">Самовывоз из магазина</span><span class="receive-way__time">Сегодня, Бесплатно</span></label>
+              <ul class="pick-list">
+                <li class="pick-list__item">
+                  <input class="pick-list__item-checkbox visually-hidden" id="pickup" type="radio" name="receive-way" value="pickup" checked>
+                  <label class="pick-list__item-box" for="pickup"><span class="pick-list__name pick-list__name--pickup">Самовывоз из магазина</span><span class="pick-list__text">Сегодня, Бесплатно</span></label>
                 </li>
-                <li class="receive-way__item">
-                  <input class="receive-way__item-checkbox visually-hidden" id="delivery" type="radio" name="receive-way" value="delivery">
-                  <label class="receive-way__item-box" for="delivery"><span class="receive-way__name receive-way__name--delivery">Доставка</span><span class="receive-way__time">Курьером до двери</span></label>
+                <li class="pick-list__item">
+                  <input class="pick-list__item-checkbox visually-hidden" id="delivery" type="radio" name="receive-way" value="delivery">
+                  <label class="pick-list__item-box" for="delivery"><span class="pick-list__name pick-list__name--delivery">Доставка</span><span class="pick-list__text">Курьером до двери</span></label>
                 </li>
               </ul>
               <div class="pickup receive-way__pickup">
-                <div class="pickup__part">
-                  <p class="pickup__address">г. Краснодар, ул. Крупской, 280</p>
-                  <ul class="pickup__list">
-                    <li class="pickup__item pickup__item--time">Часы работы:<span>9.00 - 19.00 без перерывов и выходных</span></li>
-                    <li class="pickup__item pickup__item--info">Можно забрать через 15<span>минут или в течении 14 дней</span></li>
-                  </ul>
-                  <button class="button button--clear pickup__button">Изменить магазин</button>
-                </div>
-                <div class="pickup__part"><a class="pickup__image-link"><img class="pickup__image" width="155" height="108" src="img/shop.jpg" alt="г. Краснодар, ул. Крупской, 280" tabindex="0">
-                    <p class="pickup__image-caption">Кликните, чтобы увеличить</p><img class="pickup__full-image" width="155" height="108" src="img/shop-big.jpg" alt="г. Краснодар, ул. Крупской, 280"></a></div>
-                <div class="pickup__part">
-                  <iframe class="pickup__map" src="https://yandex.ru/map-widget/v1/-/CCUURDUQxA" width="210" height="218" frameborder="0"></iframe>
+                <div class="pickup__parts-wrap">
+                  <div class="pickup__part">
+                    <p class="pickup__title">г. Краснодар, ул. Крупской, 280</p>
+                    <ul class="pickup__list">
+                      <li class="pickup__item pickup__item--time">Часы работы:<span>9.00 - 19.00 без перерывов и выходных</span></li>
+                      <li class="pickup__item pickup__item--info">Можно забрать через 15<span>минут или в течении 14 дней</span></li>
+                    </ul>
+                    <div class="pickup__container">
+                      <button class="button button--clear pickup__button">Изменить магазин</button>
+                    </div>
+                  </div>
+                  <div class="pickup__part"><a class="pickup__image-link"><img class="pickup__image" width="155" height="108" src="img/shop.jpg" alt="г. Краснодар, ул. Крупской, 280" tabindex="0">
+                      <p class="pickup__image-caption">Кликните, чтобы увеличить</p><img class="pickup__full-image" width="155" height="108" src="img/shop.jpg" alt="г. Краснодар, ул. Крупской, 280"></a></div>
+                  <div class="pickup__part">
+                    <iframe class="pickup__map" src="https://yandex.ru/map-widget/v1/-/CCUURDUQxA" width="210" height="218" frameborder="0"></iframe>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="order__part pay-way">
-              <h2 class="title title--h2 order__part-title"><span class="order__part-number">3.</span>Выберите способ оплаты</h2>
-              <ul class="pay-way__list">
-                <li class="pay-way__item">
-                  <input class="visually-hidden" id="card" type="radio" name="pay-way" value="card" checked>
-                  <label for="card"><img class="pay-way__image" width="209" height="22" src="img/icon-cards.svg" alt="Способы оплаты"><span class="pay-way__name pay-way__name--card">Банковская карта</span><span class="pay-way__text">Комиссия 0%, самый безопасный способ</span></label>
+              <h2 class="title title--h2 order__part-title"><span class="order__part-number">3.</span> Выберите способ оплаты
+              </h2>
+              <ul class="pick-list pick-list--checkbox">
+                <li class="pick-list__item">
+                  <input class="pick-list__item-checkbox visually-hidden" id="card" type="radio" name="pay-way" value="card" checked>
+                  <label class="pick-list__item-box" for="card"><span class="pick-list__name">Банковская карта</span><img class="pick-list__image" width="209" height="22" src="img/icon-cards.svg" alt="Способы оплаты"><span class="pick-list__text">Комиссия 0%, самый безопасный способ</span></label>
                 </li>
-                <li class="pay-way__item">
-                  <input class="visually-hidden" id="cash" type="radio" name="pay-way" value="cash">
-                  <label for="cash"><span class="pay-way__name pay-way__name--cash">При получении</span><span class="pay-way__text">Оплата наличными или банковской картой</span></label>
+                <li class="pick-list__item">
+                  <input class="pick-list__item-checkbox visually-hidden" id="cash" type="radio" name="pay-way" value="cash">
+                  <label class="pick-list__item-box" for="cash"><span class="pick-list__name">При получении</span><span class="pick-list__text">Оплата наличными или банковской картой</span></label>
                 </li>
-                <li class="pay-way__item">
-                  <input class="visually-hidden" id="account" type="radio" name="pay-way" value="account">
-                  <label for="account"><span class="pay-way__name pay-way__name--account">Банковский счет</span><span class="pay-way__text">Оплата через р/с для юр. лиц</span></label>
+                <li class="pick-list__item">
+                  <input class="pick-list__item-checkbox visually-hidden" id="account" type="radio" name="pay-way" value="account">
+                  <label class="pick-list__item-box" for="account"><span class="pick-list__name">Банковский счет</span><span class="pick-list__text">Оплата через р/с для юр. лиц</span></label>
                 </li>
               </ul>
             </div>
             <div class="order__part user-data">
-              <h2 class="title title--h2 order__part-title"><span class="order__part-number">4.</span>Данные покупателя</h2>
-              <p class="user-data__field">
-                <input class="input" type="tel" name="tel" placeholder="Телефон" required>
-              </p>
-              <p class="user-data__field">
-                <input class="input" type="email" name="email" placeholder="E-mail (необязательно)">
-              </p>
-              <p class="user-data__field">
-                <textarea class="input" name="comment" placeholder="Коментарий к заказу"></textarea>
-              </p>
+              <h2 class="title title--h2 order__part-title"><span class="order__part-number">4.</span> Данные покупателя
+              </h2>
+              <div class="user-data__info">
+                <p class="user-data__field">
+                  <input class="input" type="tel" name="tel" placeholder="Телефон" required>
+                </p>
+                <p class="user-data__field">
+                  <input class="input" type="email" name="email" placeholder="E-mail (необязательно)">
+                </p>
+                <p class="user-data__field">
+                  <textarea class="input" name="comment" placeholder="Коментарий к заказу" rows="4"></textarea>
+                </p>
+              </div>
             </div>
-            <div class="order__part user-data">
-              <div class="promocode show">
-                <button class="promocode__button" type="button">Промокод</button>
-                <p class="promocode__field">
-                  <input class="input" type="text" name="promocode-data" placeholder="Промокод">
-                  <button class="button--min button--next" type="button"></button>
+            <div class="order__part">
+              <div class="promocode order__part-promocode">
+                <input class="promocode__checkbox visually-hidden" id="promocode-field" type="checkbox" name="promocode-field">
+                <label class="promocode__button" for="promocode-field"><span class="promocode__text">Промокод</span><span class="promocode__text promocode__text--show">Введите промокод</span></label>
+                <p class="input-field promocode__field">
+                  <input class="input input--with-button" type="text" name="promocode" placeholder="Промокод">
+                  <button class="button button--with-input button--min button--next" type="button"></button>
                 </p>
               </div>
             </div>
           </div>
           <div class="order__info">
             <div class="order-card">
-              <p class="order-card__title">Ваш заказ<span class="order-card__number">№ 6797677</span></p>
+              <p class="title title--h2 order-card__title">Ваш заказ<span class="order-card__number">№ 6797677</span></p>
               <div class="order-card__part">
                 <p class="order-card__line">Товары (4)<span>2 961 ₽</span></p>
                 <p class="order-card__line">Доставка<span>400 ₽</span></p>
@@ -128,17 +135,17 @@
                 <p class="order-card__line order-card__line--prepay">Предоплата<span>0 ₽</span></p>
               </div>
               <div class="order-card__part">
-                <button class="button order-card__button" type="button">Подтвердить заказ</button>
+                <button class="button order-card__button" type="submit" disabled>Подтвердить заказ</button>
                 <p class="order-card__button-caption">Нажимая на кнопку «Перейти к оплате», Вы соглашаетесь на <a href="#" target="_blank">обработку персональных данных</a></p>
               </div>
             </div>
             <div class="order-feature">
               <ul class="order-feature__list">
                 <li class="order-feature__item order-feature__item--help">
-                  <p class="order-feature__name">Нужна помощь?<span><a class="order-feature__name-link" href="tel:88003333342">8 (800) 222-23-42</a>(c 09:00 до 18:00)</span></p>
+                  <p class="order-feature__name">Нужна помощь?<span> <br><a class="order-feature__name-link" href="tel:88003333342">8 (800) 222-23-42</a> (c 09:00 до 18:00)</span></p>
                   <p class="order-feature__text">без перерыва и выходных</p>
                 </li>
-                <li class="order-feature__item order-feature__item--help">
+                <li class="order-feature__item order-feature__item--safe">
                   <p class="order-feature__name">Безопасная оплата</p>
                   <p class="order-feature__text">оплата через процессинг ОАО "Сбербанк России"</p>
                 </li>
@@ -153,22 +160,15 @@
       </div>
     </main>
     <footer class="page-footer">
-      <div class="page__container">
-        <p class="copyright">2021 © «Новый мир»</p>
-        <p class="pay"><img class="pay__image" width="272" height="48" src="img/icon-cards-pale.svg" alt="Способы оплаты"></p>
-        <p class="privacy"><a class="privacy__link" href="#">Политика конфиденциальности</a></p>
+      <div class="page-footer__content page__container">
+        <p class="page-footer__copyright">2021 © «Новый мир»</p>
+        <p class="page-footer__pay"><img class="page-footer__pay-image" width="272" height="48" src="img/icon-cards-pale.svg" alt="Способы оплаты"></p>
+        <p class="page-footer__privacy"><a class="page-footer__privacy-link" href="#">Политика конфиденциальности</a></p>
       </div>
     </footer>
     <script src="js/index.js" type="module"></script>
     <div class="svg-library"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-arrow-breadcrumb" viewBox="0 0 9 13">
 <path d="M7.375 12.25L1.625 6.5L7.375 0.75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</symbol><symbol id="icon-arrow-dropdown" viewBox="0 0 24 24">
-<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="6" y="8" width="12" height="8">
-<path d="M6.49547 11.6054L10.8239 15.5532C11.4756 16.1476 12.5285 16.1476 13.1803 15.5532L17.5086 11.6054C18.5615 10.6452 17.8095 8.99902 16.3221 8.99902H7.66531C6.17794 8.99902 5.44262 10.6452 6.49547 11.6054Z" fill="black"/>
-</mask>
-<g mask="url(#mask0)">
-<path d="M0 0H24V24H0V0Z" fill="#404040"/>
-</g>
 </symbol><symbol id="icon-cross" viewBox="0 0 14 14">
 <path d="M1.39999 12.6004L12.6 1.40039" stroke="#A4A4A4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6 12.6004L1.39999 1.40039L12.6 12.6004Z" stroke="#A4A4A4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

@@ -1,3 +1,9 @@
+.breadcrumbs {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
 .breadcrumbs__link {
   @include link-reset();
   @include font(12px, 16px, 400);

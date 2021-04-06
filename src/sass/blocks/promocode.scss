@@ -1,0 +1,68 @@
+.promocode {
+  position: relative;
+  width: 357px;
+  padding: 21px 16px;
+  background-color: $white;
+  border-radius: 4px;
+  box-shadow: 0 5px 10px rgba($color-text-light, 0.27);
+}
+
+.promocode__button {
+  @include font(16px, 24px, 400);
+  display: block;
+  position: relative;
+  padding-left: 28px;
+  color: $color-text;
+  background: url("../img/icon-percent.svg") no-repeat;
+  cursor: pointer;
+
+  &::after {
+    @include pseudo(24px, 24px);
+    top: 0;
+    right: 0;
+    background: url("../../img/icon-arrow-dropdown.svg") no-repeat;
+
+    .promocode__checkbox:checked ~ & {
+      background: url("../../img/icon-cross.svg") no-repeat;
+    }
+  }
+}
+
+.promocode__text {
+  .promocode__checkbox:checked ~ .promocode__button & {
+    display: none;
+  }
+
+  &--show {
+    display: none;
+
+    .promocode__checkbox:checked ~ .promocode__button & {
+      display: block;
+    }
+  }
+}
+
+.promocode__field {
+  @include reset();
+  display: none;
+  padding-top: 14px;
+  transition: $main-transition;
+
+  .promocode__checkbox:checked ~ & {
+    display: flex;
+    transition: $main-transition;
+    animation: fade-in-show 0.5s ease;
+  }
+}
+
+@keyframes fade-in-show {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

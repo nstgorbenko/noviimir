@@ -1,16 +1,47 @@
 .order {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 117px;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+  }
 }
 
 .order__process {
   margin-top: 50px;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 2px;
+  }
 }
 
-.order__part {
-  margin-top: 61px;
+.order__info {
+  margin-top: 45px;
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+    margin-top: 60px;
+  }
+
+  @media (max-width: $tablet-width-min) {
+    flex-direction: column;
+  }
+}
+
+.order__part-title {
+  margin-top: 60px;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 54px;
+  }
 }
 
 .order__part-number {
   @include font(24px, 20px, 500);
   color: $color-step;
+}
+
+.order__part-promocode {
+  margin-top: 60px;
 }
