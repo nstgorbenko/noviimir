@@ -8,6 +8,10 @@
   @media (max-width: $tablet-width-min) {
     width: 100%;
   }
+
+  @media (max-width: $mobile-width) {
+    padding: 24px 20px;
+  }
 }
 
 .pickup__parts-wrap {
@@ -28,12 +32,27 @@
     margin-right: 30px;
     margin-bottom: 30px;
   }
+
+  @media (max-width: $mobile-width) {
+    margin-right: 0;
+    margin-bottom: 22px;
+  }
+
+  &:last-child {
+    @media (max-width: $mobile-width) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .pickup__title {
   @include reset();
   @include font(20px, 26px, 400);
   color: $color-text;
+
+  @media (max-width: $mobile-width) {
+    @include font(18px, 24px, 400);
+  }
 
   &:not(:first-child) {
     margin-top: 14px;
@@ -78,6 +97,10 @@
   min-width: 169px;
   padding: 11px 22px;
 
+  @media (max-width: $tablet-width-min) {
+    margin: 10px 0;
+  }
+
   &:not(:nth-child(n+2)) {
     margin-top: 28px;
   }
@@ -87,11 +110,38 @@
   display: block;
   margin-top: 55px;
   cursor: zoom-in;
+
+  @media (max-width: 656px) {
+    margin-top: 0;
+  }
 }
 
 .pickup__image {
   border-radius: 6px;
   outline: none;
+
+  @media (max-width: 656px) {
+    width: 100%;
+  }
+
+  .pickup__point & {
+    @media (max-width: $mobile-width) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: auto;
+      height: auto;
+
+      max-height: none;
+      max-width: none;
+
+      min-height: 100%;
+      min-width: 100%;
+
+      transform: translate(-50%, -50%);
+    }
+  }
 }
 
 .pickup__full-image {
@@ -120,6 +170,10 @@
   @include font(12px, 20px, 300);
   margin-top: 5px;
   color: $color-text-light;
+
+  @media (max-width: 656px) {
+    display: none;
+  }
 }
 
 .pickup__map {
@@ -128,15 +182,32 @@
   @media (max-width: $tablet-width-min) {
     width: 100%;
   }
+
+  @media (max-width: $mobile-width) {
+    height: 167px;
+  }
 }
 
 .pickup__point {
+  position: relative;
   margin: 40px -26px -25px;
+  overflow: hidden;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    height: 404px;
+    margin: 22px 0 0;
+  }
 }
 
 .pickup__container {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: $tablet-width-min) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .pickup__address {
@@ -145,16 +216,22 @@
   color: $color-text;
 }
 
-.pickup__info {
-  width: 660px;
-}
-
 .pickup__field {
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  max-width: 660px;
   margin-top: 24px;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    margin-top: 0;
+  }
 }
 
 .pickup__delivery-map {
   margin-top: 23px;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
 }

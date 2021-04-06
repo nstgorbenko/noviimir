@@ -3,4 +3,8 @@
   border-color: $white;
   box-shadow: 0 5px 10px rgba($black, 0.15);
   border-radius: 10px;
+
+  @media (max-width: $mobile-width) {
+    padding: 30px 20px 37px;
+  }
 }

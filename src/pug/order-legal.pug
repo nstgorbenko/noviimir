@@ -55,7 +55,7 @@ html(lang="ru")
                 = " "
                 | Выберите способ получения
               p.receive-way__place В г. Краснодар
-              ul.pick-list
+              ul.pick-list.pick-list--double
                 li.pick-list__item
                   input#pickup.pick-list__item-checkbox.visually-hidden(type="radio", name="receive-way", value="pickup", checked)
                   label.pick-list__item-box(for="pickup")
@@ -178,6 +178,8 @@ html(lang="ru")
                 li.order-feature__item.order-feature__item--guaranty
                   p.order-feature__name Гарантия доставки
                   p.order-feature__text работаем с службой курьерской доставки СДЭК
+
+          a.order__back-link Вернуться в корзину
 
     footer.page-footer
       .page-footer__content.page__container

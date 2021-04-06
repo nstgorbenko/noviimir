@@ -5,11 +5,16 @@
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
+    margin-bottom: 58px;
   }
 }
 
 .order__process {
   margin-top: 50px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 26px;
+  }
 
   @media (max-width: $mobile-width) {
     margin-top: 2px;
@@ -21,20 +26,22 @@
 
   @media (max-width: $tablet-width) {
     display: flex;
+    align-items: center;
     margin-top: 60px;
   }
 
   @media (max-width: $tablet-width-min) {
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 40px;
   }
 }
 
 .order__part-title {
   margin-top: 60px;
-
-  @media (max-width: $mobile-width) {
-    margin-top: 54px;
-  }
 }
 
 .order__part-number {
@@ -44,4 +51,18 @@
 
 .order__part-promocode {
   margin-top: 60px;
+}
+
+.order__back-link {
+  @include link-reset();
+  @include font(16px, 16px, 400);
+  display: none;
+  margin-top: 40px;
+  color: $color-link;
+  text-decoration: underline;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    margin-top: 36px;
+  }
 }

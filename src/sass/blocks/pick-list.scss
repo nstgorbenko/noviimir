@@ -11,6 +11,7 @@
 
 .pick-list__item {
   display: flex;
+  flex-shrink: 0;
   margin-right: 16px;
 
   @media (max-width: $tablet-width-min) {
@@ -20,6 +21,25 @@
   @media (max-width: $mobile-width) {
     flex-grow: 1;
     margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .pick-list--double & {
+    @media (max-width: $tablet-width-min) {
+      width: 49.5%;
+      max-width: 260px;
+      margin-right: 0;
+    }
+
+    @media (max-width: $mobile-width) {
+      flex-grow: 0;
+    }
+  }
+
+  .pick-list--double &:not(:last-child) {
+    @media (max-width: $tablet-width-min) {
+      margin-right: 1%;
+    }
   }
 }
 
@@ -36,10 +56,22 @@
 
   @media (max-width: $mobile-width) {
     width: 100%;
+    min-width: 260px;
+    padding: 18px 14px 14px;
   }
 
   .pick-list__item-checkbox:checked ~ & {
     border: 1.5px solid $color-active;
+  }
+
+  .pick-list--double & {
+    @media (max-width: $tablet-width-min) {
+      width: 100%;
+    }
+
+    @media (max-width: $mobile-width) {
+      min-width: 0;
+    }
   }
 }
 
@@ -85,6 +117,10 @@
 
 .pick-list__image {
   margin-top: 8px;
+
+  @media (max-width: $mobile-width) {
+    width: 127px;
+  }
 }
 
 .pick-list__text {
@@ -94,6 +130,10 @@
   width: 70%;
   margin-top: 8px;
   color: $color-text-lighter;
+
+  @media (max-width: $tablet-width-min) {
+    width: 100%;
+  }
 
   @media (max-width: $mobile-width) {
     @include font(12px, 16px, 400);

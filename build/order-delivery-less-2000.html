@@ -49,7 +49,7 @@
               <h2 class="title title--h2 order__part-title"><span class="order__part-number">2.</span> Выберите способ получения
               </h2>
               <p class="receive-way__place">В г. Кемерово</p>
-              <ul class="pick-list">
+              <ul class="pick-list pick-list--double">
                 <li class="pick-list__item">
                   <input class="pick-list__item-checkbox visually-hidden" id="pickup" type="radio" name="receive-way" value="pickup">
                   <label class="pick-list__item-box" for="pickup"><span class="pick-list__name pick-list__name--pickup">Самовывоз</span><span class="pick-list__text">Из пункта выдачи</span></label>
@@ -66,7 +66,7 @@
                 <p class="pickup__title">Адрес для выезда курьера</p>
                 <div class="pickup__info">
                   <div class="pickup__field">
-                    <input class="input input--wide" type="text" name="address" placeholder="Ваш адрес">
+                    <input class="input" type="text" name="address" placeholder="Ваш адрес">
                   </div>
                   <div class="pickup__field">
                     <input class="input" type="text" name="flat" placeholder="Квартира">
@@ -77,7 +77,7 @@
                     <input class="input" type="text" name="doorphone" placeholder="Домофон">
                   </div>
                   <div class="pickup__field">
-                    <textarea class="input input--wide" name="comment" placeholder="Что нужно знать курьеру" rows="4"></textarea>
+                    <textarea class="input" name="comment" placeholder="Что нужно знать курьеру" rows="4"></textarea>
                   </div>
                   <div class="pickup__delivery-map">
                     <iframe class="pickup__map" src="https://yandex.ru/map-widget/v1/-/CCUUnPR22A" width="738" height="356" frameborder="0"></iframe>
@@ -161,7 +161,7 @@
                 </li>
               </ul>
             </div>
-          </div>
+          </div><a class="order__back-link">Вернуться в корзину</a>
         </section>
       </div>
     </main>

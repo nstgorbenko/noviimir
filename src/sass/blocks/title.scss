@@ -22,5 +22,23 @@
 
   &--h3 {
     @include font(20px, 23px, 500);
+
+    @media (max-width: $mobile-width) {
+      @include font(18px, 21px, 500);
+    }
+
+    .order-state__item & {
+      @media (max-width: $mobile-width) {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+    }
+  }
+
+  span {
+    @media (max-width: $mobile-width) {
+      display: block;
+    }
   }
 }

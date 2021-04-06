@@ -3,4 +3,16 @@
   border-color: $white;
   box-shadow: 0 5px 10px rgba($black, 0.15);
   border-radius: 10px;
+
+  @media (max-width: $mobile-width) {
+    padding: 22px 20px 40px;
+  }
+}
+
+.order-content__cart-table {
+  margin-top: 27px;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 0;
+  }
 }

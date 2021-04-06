@@ -3,6 +3,21 @@
   border-color: $white;
   box-shadow: 0 5px 10px rgba($black, 0.15);
   border-radius: 10px;
+
+  @media (max-width: $tablet-width-min) {
+    padding: 24px 20px 37px;
+  }
+}
+
+.order-state__item {
+  @media (max-width: $tablet-width-min) {
+    margin-bottom: 22px;
+  }
+
+  &:last-child {
+    margin-top: 4px;
+    margin-bottom: 0;
+  }
 }
 
 .order-state__info {
@@ -10,6 +25,11 @@
   display: flex;
   justify-content: space-between;
   margin-top: 31px;
+
+  @media (max-width: $tablet-width-min) {
+    flex-direction: column;
+    margin-top: 26px;
+  }
 }
 
 .order-state__info-text {
@@ -17,6 +37,16 @@
   @include font(16px, 20px, 400);
   margin-top: 20px;
   color: $color-text;
+
+  @media (max-width: $tablet-width-min) {
+    margin-top: 8px;
+  }
+
+  &:first-of-type {
+    @media (max-width: $tablet-width-min) {
+      margin-top: 16px;
+    }
+  }
 }
 
 .order-state__info-name {
@@ -54,6 +84,12 @@
   width: 650px;
   margin-top: 11px;
   color: $color-text-light;
+
+  @media (max-width: $tablet-width-min) {
+    @include font(14px, 20px, 400);
+    width: 100%;
+    margin-top: 17px;
+  }
 
   &--dark {
     color: $color-text;

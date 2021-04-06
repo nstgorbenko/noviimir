@@ -10,10 +10,15 @@
     width: auto;
     max-width: 536px;
     margin-right: 4.5%;
+    padding: 40px 46px 40px 26px;
   }
 
   @media (max-width: $tablet-width-min) {
     margin-right: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 32px 20px 22px;
   }
 }
 
@@ -46,11 +51,19 @@
 
   &--prepay {
     color: $color-text-lighter;
+
+    @media (max-width: $mobile-width) {
+      @include font(14px, 20px, 400);
+    }
   }
 }
 
 .order-card__part {
   margin-top: 24px;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 25px;
+  }
 }
 
 .order-card__button {

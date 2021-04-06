@@ -19,8 +19,26 @@
     padding: 12px 74px 12px 16px;
   }
 
-  &--wide {
+  .promocode__field & {
+    @media (max-width: $tablet-width) {
+      width: 290px;
+    }
+
+    @media (max-width: $mobile-width) {
+      width: 100%;
+    }
+  }
+
+  .pickup__field & {
     width: 100%;
+
+    @media (max-width: $mobile-width) {
+      margin-top: 24px;
+    }
+  }
+
+  .pickup__field &:not(:last-child) {
+    margin-right: 20px;
   }
 
   &::placeholder {
@@ -94,6 +112,10 @@
   margin-top: 14px;
   width: 320px;
   color: $color-text-lighter;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
 }
 
 .input__caption-link {

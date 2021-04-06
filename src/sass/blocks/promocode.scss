@@ -5,6 +5,14 @@
   background-color: $white;
   border-radius: 4px;
   box-shadow: 0 5px 10px rgba($color-text-light, 0.27);
+
+  @media (max-width: $tablet-width) {
+    width: 320px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
 }
 
 .promocode__button {

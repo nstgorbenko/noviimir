@@ -4,8 +4,16 @@
   margin-top: 17px;
   color: $color-link;
   text-decoration: underline;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 11px;
+  }
 }
 
 .receive-way__pickup {
   margin-top: 23px;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 5px;
+  }
 }

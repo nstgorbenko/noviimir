@@ -1,9 +1,19 @@
 .payment {
-  margin: 48px 0 350px;
+  display: flex;
+  flex-direction: column;
+  margin: 48px 0 120px;
+
+  @media (max-width: $mobile-width) {
+    margin: 20px 0 80px;
+  }
 }
 
 .payment__data {
   margin-top: 26px;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 18px;
+  }
 }
 
 .payment__info {
@@ -11,6 +21,10 @@
   @include font(14px, 20px, 400);
   margin-top: 16px;
   color: $color-text-lighter;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 10px;
+  }
 }
 
 .payment__info-text {
@@ -32,27 +46,60 @@
 .payment__link {
   @include reset();
   @include font(16px, 20px, 400);
-  display: block;
+  display: inline-block;
   margin-top: 22px;
   color: $color-link;
   text-decoration: underline;
+
+  @media (max-width: $mobile-width) {
+    @include font(14px, 20px, 400);
+    align-self: center;
+    margin-top: 30px;
+    padding: 13px 50px;
+    color: $white;
+    background-color: $color-button;
+    border: 1px solid $color-button;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    transition: $main-transition;
+  }
+
+  &:hover,
+  &:focus {
+    @media (max-width: $mobile-width) {
+      background-color: $color-button-hover;
+    }
+  }
 }
 
 .payment__order-state {
   margin-top: 60px;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 26px;
+  }
 }
 
 .payment__order-info {
   margin-top: 50px;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 30px;
+  }
 }
 
 .payment__order-content {
   margin-top: 40px;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 50px;
+  }
 }
 
 .payment__button {
   display: inline-block;
-  margin-top: 40px;
+  margin: 40px auto 0;
   padding: 13px 36px;
 }
 
@@ -61,6 +108,11 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 20px;
+
+  @media (max-width: $tablet-width-min) {
+    flex-direction: column;
+    margin-top: 15px;
+  }
 }
 
 .payment__note-button {

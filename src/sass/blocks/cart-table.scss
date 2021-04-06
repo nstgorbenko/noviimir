@@ -1,12 +1,15 @@
-.cart-table {
-  margin-top: 27px;
-}
-
 .cart-table__row {
   @include font(16px, 20px, 400);
   display: flex;
   margin-top: 24px;
   color: $color-text;
+
+  @media (max-width: $tablet-width-min) {
+    flex-wrap: wrap;
+    margin-top: 18px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $color-line;
+  }
 
   &--title {
     @include font(14px, 20px, 400);
@@ -14,27 +17,64 @@
     padding-bottom: 14px;
     border-bottom: 1px solid $color-line;
   }
+
 }
 
 .cart-table__cell {
-
   &:nth-child(1) {
     width: 69%;
+
+    @media (max-width: $tablet-width-min) {
+      width: 80%;
+    }
   }
 
   &:nth-child(2) {
     width: 7%;
     text-align: right;
+
+    @media (max-width: $tablet-width-min) {
+      @include font(14px, 20px, 400);
+      width: 20%;
+      color: $color-text-lighter;
+    }
   }
 
   &:nth-child(3) {
     width: 12%;
     text-align: right;
+
+    @media (max-width: $tablet-width-min) {
+      @include font(14px, 20px, 400);
+      width: 50%;
+      margin-top: 13px;
+      text-align: left;
+      color: $color-text-lighter;
+    }
   }
 
   &:nth-child(4) {
     width: 12%;
     text-align: right;
+
+    @media (max-width: $tablet-width-min) {
+      width: 50%;
+      margin-top: 13px;
+    }
+  }
+
+  .cart-table__row--title &:nth-child(n+2) {
+    @media (max-width: $tablet-width-min) {
+      display: none;
+    }
+  }
+
+  span {
+    display: none;
+
+    @media (max-width:  $tablet-width-min) {
+      display: inline-block;
+    }
   }
 }
 
@@ -43,12 +83,21 @@
   flex-direction: column;
   margin-top: 28px;
   border-top: 1px solid $color-line;
+
+  @media (max-width: $tablet-width-min) {
+    margin-top: 13px;
+    border-top: none;
+  }
 }
 
 .cart-table__total-part {
   width: 310px;
   align-self: flex-end;
   margin-top: 12px;
+
+  @media (max-width: $tablet-width-min) {
+    width: 100%;
+  }
 
   &--total {
     margin-top: 20px;
@@ -65,11 +114,19 @@
 
   &--total {
     @include font(16px, 20px, 500);
+
+    @media (max-width: $tablet-width-min) {
+      @include font(22px, 20px, 500);
+    }
   }
 
   &--prepay {
     @include font(14px, 20px, 400);
     color: $color-text-lighter;
+
+    @media (max-width: $tablet-width-min) {
+      margin-top: 8px;
+    }
   }
 }
 

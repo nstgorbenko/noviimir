@@ -9,7 +9,7 @@
 
   @media (max-width: $mobile-width) {
     width: 70%;
-    margin-top: 20px;
+    margin-top: 16px;
   }
 }
 
@@ -37,8 +37,16 @@
   @include reset();
   @include font(20px, 23px, 500);
   margin-top: 28px;
+
+  @media (max-width: $mobile-width) {
+    @include font(18px, 24px, 500);
+  }
 }
 
 .register__user-data {
   @include font(16px, 19px, 400);
+
+  @media (max-width: $mobile-width) {
+    @include font(14px, 20px, 400);
+  }
 }

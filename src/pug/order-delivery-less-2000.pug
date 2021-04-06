@@ -55,7 +55,7 @@ html(lang="ru")
                 = " "
                 | Выберите способ получения
               p.receive-way__place В г. Кемерово
-              ul.pick-list
+              ul.pick-list.pick-list--double
                 li.pick-list__item
                   input#pickup.pick-list__item-checkbox.visually-hidden(type="radio", name="receive-way", value="pickup")
                   label.pick-list__item-box(for="pickup")
@@ -73,7 +73,7 @@ html(lang="ru")
                 p.pickup__title Адрес для выезда курьера
                 .pickup__info
                   .pickup__field
-                    input.input.input--wide(type="text", name="address" placeholder="Ваш адрес")
+                    input.input(type="text", name="address" placeholder="Ваш адрес")
                   .pickup__field
                     input.input(type="text", name="flat" placeholder="Квартира")
                     input.input(type="text", name="floor" placeholder="Этаж")
@@ -81,7 +81,7 @@ html(lang="ru")
                     input.input(type="text", name="door" placeholder="Подъезд")
                     input.input(type="text", name="doorphone" placeholder="Домофон")
                   .pickup__field
-                    textarea.input.input--wide(name="comment" placeholder="Что нужно знать курьеру", rows="4")
+                    textarea.input(name="comment" placeholder="Что нужно знать курьеру", rows="4")
                   .pickup__delivery-map
                     iframe.pickup__map(src="https://yandex.ru/map-widget/v1/-/CCUUnPR22A" width="738" height="356" frameborder="0")
             .order__part.pay-way
@@ -167,6 +167,8 @@ html(lang="ru")
                 li.order-feature__item.order-feature__item--guaranty
                   p.order-feature__name Гарантия доставки
                   p.order-feature__text работаем с службой курьерской доставки СДЭК
+
+          a.order__back-link Вернуться в корзину
 
     footer.page-footer
       .page-footer__content.page__container
