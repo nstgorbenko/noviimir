@@ -22,12 +22,20 @@
   cursor: pointer;
 
   &:before {
-    @include pseudo(21px, 21px);
-    top: 0;
-    left: 0;
+    @include pseudo(16px, 16px);
+    top: 3px;
+    left: 3px;
+    border: 1px solid $color-checkbox;
+    border-radius: 3px;
+  }
+
+  &::after {
+    @include pseudo(19px, 19px);
+    top: 3px;
+    left: 3px;
 
     .register__checkbox:checked ~ & {
-      background-image: url(../../img/icon-checked.svg);
+      background: url(../../img/icon-checked.svg) no-repeat 5px -1px;
     }
   }
 }

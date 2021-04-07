@@ -884,12 +884,21 @@ template {
   .login-way__checkbox-label:before {
     content: "";
     position: absolute;
-    width: 21px;
-    height: 21px;
-    top: 0;
-    left: 0; }
-    .login-way__checkbox:checked ~ .login-way__checkbox-label:before {
-      background-image: url(../../img/icon-checked.svg); }
+    width: 16px;
+    height: 16px;
+    top: 3px;
+    left: 3px;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px; }
+  .login-way__checkbox-label::after {
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    top: 3px;
+    left: 3px; }
+    .login-way__checkbox:checked ~ .login-way__checkbox-label::after {
+      background: url(../../img/icon-checked.svg) no-repeat 5px -1px; }
 
 .login-way__button {
   font-family: "Roboto", sans-serif;
@@ -1938,12 +1947,21 @@ template {
   .register__checkbox-label:before {
     content: "";
     position: absolute;
-    width: 21px;
-    height: 21px;
-    top: 0;
-    left: 0; }
-    .register__checkbox:checked ~ .register__checkbox-label:before {
-      background-image: url(../../img/icon-checked.svg); }
+    width: 16px;
+    height: 16px;
+    top: 3px;
+    left: 3px;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px; }
+  .register__checkbox-label::after {
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    top: 3px;
+    left: 3px; }
+    .register__checkbox:checked ~ .register__checkbox-label::after {
+      background: url(../../img/icon-checked.svg) no-repeat 5px -1px; }
 
 .register__user {
   margin: 0;
