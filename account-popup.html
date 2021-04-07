@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Новый мир. Личный кабинет</title>
+  </head>
+  <body class="page">
+    <header class="page-header">
+      <div class="page__container"><a class="page-header__logo-link" href="#"><img class="page-header__logo-image" width="223" height="72" src="img/icon-logo.svg" alt="Логотип компании Новый мир"></a></div>
+    </header>
+    <main class="page-main">
+      <div class="page__container">
+        <section class="login">
+          <div class="login__process">
+            <h1 class="title title--h1">Личный кабинет</h1>
+            <div class="login__wrapper">
+              <div class="login-way">
+                <input class="login-way__item-checkbox login-way__item-checkbox--1 visually-hidden" id="login" type="radio" name="login-way" value="login" checked>
+                <label class="login-way__item-box" for="login">Авторизация</label>
+                <input class="login-way__item-checkbox login-way__item-checkbox--2 visually-hidden" id="register" type="radio" name="login-way" value="register">
+                <label class="login-way__item-box" for="register">Регистрация</label>
+                <div class="login-way__form login-way__form--1">
+                  <h2 class="title title--h2 login-way__title">Авторизоваться</h2>
+                  <div class="input-field login__field">
+                    <input class="input input--with-button input--valid" type="text" name="register-data" placeholder="Телефон или e-mail" required><span class="input__name">Телефон или e-mail</span><span class="input__status input__status--error">Укажите телефон или e-mail</span><span class="input__status input__status--ok">Все верно</span>
+                    <button class="button button--with-input" type="button">Получить код</button>
+                    <button class="input__button" type="button" aria-label="Узнать формат данных">
+                      <svg class="input__icon input__icon--help" width="24" height="24">
+                        <use xlink:href="img/sprite.svg#icon-help"></use>
+                      </svg>
+                    </button>
+                    <div class="input__info">
+                      <p class="input__info-text">Телефон в формате: 7 000 000 00 00</p>
+                      <p class="input__info-text">Формат e-mail: name@exampie.ru</p>
+                    </div>
+                  </div>
+                  <p class="input__caption">Нажимая на кнопку «Получить код», Вы соглашаетесь <a class="input__caption-link" href="#" target="_blank">на обработку персональных данных</a></p>
+                </div>
+                <div class="login-way__form login-way__form--2">
+                  <h2 class="title title--h2 login-way__title">Зарегистрироваться</h2>
+                  <p class="input-field login-way__field">
+                    <input class="input input--valid" type="text" name="full-name" placeholder="ФИО" required><span class="input__name">ФИО</span><span class="input__status input__status--error">Ошибка</span><span class="input__status input__status--ok">Все верно</span>
+                  </p>
+                  <p class="input-field login-way__field">
+                    <input class="input input--valid" type="tel" name="tel" placeholder="Телефон" required><span class="input__name">Телефон</span><span class="input__status input__status--error">Телефон указан некорректно</span><span class="input__status input__status--ok">Все верно</span>
+                  </p>
+                  <p class="input-field login-way__field">
+                    <input class="input input--valid" type="email" name="email" placeholder="E-mail (необязательно)"><span class="input__name">E-mail</span><span class="input__status input__status--error">E-mail указан некорректно</span><span class="input__status input__status--ok">Все верно</span>
+                  </p>
+                  <p class="login-way__join">
+                    <input class="login-way__checkbox visually-hidden" id="subscribe" type="checkbox" name="subscribe" checked>
+                    <label class="login-way__checkbox-label" for="subscribe">Получать акции и новости на указанный адрес электронной почты</label>
+                  </p>
+                  <button class="button login-way__button" type="submit">Регистрация</button>
+                  <p class="input__caption">Нажимая на кнопку «Получить код», Вы соглашаетесь <a class="input__caption-link" href="#" target="_blank">на обработку персональных данных</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__content page__container">
+        <p class="page-footer__copyright">2021 © «Новый мир»</p>
+        <p class="page-footer__pay"><img class="page-footer__pay-image" width="272" height="48" src="img/icon-cards-pale.svg" alt="Способы оплаты"></p>
+        <p class="page-footer__privacy"><a class="page-footer__privacy-link" href="#">Политика конфиденциальности</a></p>
+      </div>
+    </footer>
+    <div class="popup">
+      <div class="popup__content">
+        <button class="popup__button-close" type="button" aria-label="Закрыть попап">
+          <svg class="popup__button-close-icon" width="12" height="12">
+            <use xlink:href="img/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
+        <h2 class="title title--h2">Войти или зарегистрироваться</h2>
+        <div class="input-field popup__field">
+          <input class="input input--with-button input--valid" type="text" name="register-data" placeholder="Телефон или e-mail" required><span class="input__name">Телефон или e-mail</span><span class="input__status input__status--error">Укажите телефон или e-mail</span><span class="input__status input__status--ok">Все верно</span>
+          <button class="button button--with-input" type="button">Получить код</button>
+          <button class="input__button" type="button" aria-label="Узнать формат данных">
+            <svg class="input__icon input__icon--help" width="24" height="24">
+              <use xlink:href="img/sprite.svg#icon-help"></use>
+            </svg>
+          </button>
+          <div class="input__info">
+            <p class="input__info-text">Телефон в формате: 7 000 000 00 00</p>
+            <p class="input__info-text">Формат e-mail: name@exampie.ru</p>
+          </div>
+        </div>
+        <p class="input__caption">Нажимая на кнопку «Получить код», Вы соглашаетесь <a class="input__caption-link" href="#" target="_blank">на обработку персональных данных</a></p>
+      </div>
+    </div>
+    <script src="js/index.js" type="module"></script>
+    <div class="svg-library"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-arrow-breadcrumb" viewBox="0 0 9 13">
+<path d="M7.375 12.25L1.625 6.5L7.375 0.75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol><symbol id="icon-cross" viewBox="0 0 14 14">
+<path d="M1.39999 12.6004L12.6 1.40039" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.6 12.6004L1.39999 1.40039L12.6 12.6004Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol><symbol id="icon-help" viewBox="0 0 24 24">
+<path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.09009 8.99996C9.32519 8.33163 9.78924 7.76807 10.4 7.40909C11.0108 7.05012 11.729 6.9189 12.4273 7.03867C13.1255 7.15844 13.7589 7.52148 14.2152 8.06349C14.6714 8.60549 14.9211 9.29148 14.9201 9.99996C14.9201 12 11.9201 13 11.9201 13" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 17H12.01" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol></svg>
+    </div>
+  </body>
+</html>

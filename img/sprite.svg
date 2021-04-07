@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-arrow-breadcrumb" viewBox="0 0 9 13">
+<path d="M7.375 12.25L1.625 6.5L7.375 0.75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol><symbol id="icon-cross" viewBox="0 0 14 14">
+<path d="M1.39999 12.6004L12.6 1.40039" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.6 12.6004L1.39999 1.40039L12.6 12.6004Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol><symbol id="icon-help" viewBox="0 0 24 24">
+<path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.09009 8.99996C9.32519 8.33163 9.78924 7.76807 10.4 7.40909C11.0108 7.05012 11.729 6.9189 12.4273 7.03867C13.1255 7.15844 13.7589 7.52148 14.2152 8.06349C14.6714 8.60549 14.9211 9.29148 14.9201 9.99996C14.9201 12 11.9201 13 11.9201 13" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 17H12.01" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol></svg>

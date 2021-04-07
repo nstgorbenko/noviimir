@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Новый мир. Оформление заказа</title>
+  </head>
+  <body class="page">
+    <header class="page-header">
+      <div class="page__container"><a class="page-header__logo-link" href="#"><img class="page-header__logo-image" width="223" height="72" src="img/icon-logo.svg" alt="Логотип компании Новый мир"></a></div>
+    </header>
+    <main class="page-main">
+      <div class="page__container">
+        <div class="breadcrumbs page-main__breadcrumbs"><a class="breadcrumbs__link" href="#">
+            <svg class="breadcrumbs__icon" width="6" height="12">
+              <use xlink:href="img/sprite.svg#icon-arrow-breadcrumb"></use>
+            </svg>Вернуться в корзину</a></div>
+        <section class="order">
+          <div class="order__process">
+            <h1 class="title title--h1">Оформление заказа</h1>
+            <div class="order__part register">
+              <h2 class="title title--h2 order__part-title">Войти или зарегистрироваться</h2>
+              <div class="input-field register__field">
+                <input class="input input--with-button input--valid" type="text" name="register-data" placeholder="Телефон или e-mail" required><span class="input__name">Телефон или e-mail</span><span class="input__status input__status--error">Укажите телефон или e-mail</span><span class="input__status input__status--ok">Все верно</span>
+                <button class="button button--with-input" type="button">Получить код</button>
+                <button class="input__button" type="button" aria-label="Узнать формат данных">
+                  <svg class="input__icon input__icon--help" width="24" height="24">
+                    <use xlink:href="img/sprite.svg#icon-help"></use>
+                  </svg>
+                </button>
+                <div class="input__info">
+                  <p class="input__info-text">Телефон в формате: 7 000 000 00 00</p>
+                  <p class="input__info-text">Формат e-mail: name@exampie.ru</p>
+                </div>
+              </div>
+              <p class="input__caption">Нажимая на кнопку «Получить код», Вы соглашаетесь <a class="input__caption-link" href="#" target="_blank">на обработку персональных данных</a></p>
+              <p class="register__join">
+                <input class="register__checkbox visually-hidden" id="register" type="checkbox" name="register" checked>
+                <label class="register__checkbox-label" for="register">Зарегистрируйте меня после оформления заказа</label>
+              </p>
+            </div>
+            <div class="order__part city">
+              <h2 class="title title--h2 order__part-title"><span class="order__part-number">1.</span> Ваш город
+              </h2>
+              <div class="input-field">
+                <input class="input input--valid" type="text" name="order-city" placeholder="Ваш город" required><span class="input__name">Ваш город</span><span class="input__status input__status--error">Ошибка, такого города не существует</span><span class="input__status input__status--ok">Все верно</span>
+              </div>
+            </div>
+            <div class="order__part receive-way">
+              <h2 class="title title--h2 order__part-title"><span class="order__part-number">2.</span> Выберите способ получения
+              </h2>
+              <p class="receive-way__place">В г. Кемерово</p>
+              <ul class="pick-list pick-list--double">
+                <li class="pick-list__item">
+                  <input class="pick-list__item-checkbox visually-hidden" id="pickup" type="radio" name="receive-way" value="pickup">
+                  <label class="pick-list__item-box" for="pickup"><span class="pick-list__name pick-list__name--pickup">Самовывоз</span><span class="pick-list__text">Из пункта выдачи</span></label>
+                </li>
+                <li class="pick-list__item">
+                  <input class="pick-list__item-checkbox visually-hidden" id="delivery" type="radio" name="receive-way" value="delivery" checked>
+                  <label class="pick-list__item-box" for="delivery"><span class="pick-list__name pick-list__name--delivery">Доставка</span><span class="pick-list__text">Курьером до двери</span></label>
+                </li>
+              </ul>
+              <div class="pickup receive-way__pickup">
+                <ul class="pickup__list">
+                  <li class="pickup__item pickup__item--info">Через 2-5 дня, 2 500 ₽</li>
+                </ul>
+                <p class="pickup__title">Адрес для выезда курьера</p>
+                <div class="pickup__info">
+                  <div class="pickup__field pickup__field--single">
+                    <div class="input-field">
+                      <input class="input input--valid" type="text" name="address" placeholder="Адрес"><span class="input__name">Адрес</span><span class="input__status input__status--error">Ошибка</span><span class="input__status input__status--ok">Все верно</span>
+                    </div>
+                  </div>
+                  <div class="pickup__field">
+                    <div class="input-field">
+                      <input class="input input--valid" type="text" name="flat" placeholder="Квартира"><span class="input__name">Квартира</span><span class="input__status input__status--error">Ошибка</span><span class="input__status input__status--ok">Все верно</span>
+                    </div>
+                    <div class="input-field">
+                      <input class="input input--valid" type="text" name="floor" placeholder="Этаж"><span class="input__name">Этаж</span><span class="input__status input__status--error">Ошибка</span><span class="input__status input__status--ok">Все верно</span>
+                    </div>
+                  </div>
+                  <div class="pickup__field">
+                    <div class="input-field">
+                      <input class="input input--valid" type="text" name="door" placeholder="Подъезд"><span class="input__name">Подъезд</span><span class="input__status input__status--error">Ошибка</span><span class="input__status input__status--ok">Все верно</span>
+                    </div>
+                    <div class="input-field">
+                      <input class="input input--valid" type="text" name="doorphone" placeholder="Домофон"><span class="input__name">Домофон</span><span class="input__status input__status--error">Ошибка</span><span class="input__status input__status--ok">Все верно</span>
+                    </div>
+                  </div>
+                  <div class="pickup__field">
+                    <div class="input-field">
+                      <textarea class="input" name="comment" placeholder="Что нужно знать курьеру" rows="4"></textarea><span class="input__name">Что нужно знать курьеру</span>
+                    </div>
+                  </div>
+                  <div class="pickup__delivery-map">
+                    <iframe class="pickup__map" src="https://yandex.ru/map-widget/v1/-/CCUUnPR22A" width="738" height="356" frameborder="0"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order__part pay-way">
+              <h2 class="title title--h2 order__part-title"><span class="order__part-number">3.</span> Выберите способ оплаты
+              </h2>
+              <ul class="pick-list pick-list--checkbox">
+                <li class="pick-list__item">
+                  <input class="pick-list__item-checkbox visually-hidden" id="card" type="radio" name="pay-way" value="card" checked>
+                  <label class="pick-list__item-box" for="card"><span class="pick-list__name">Банковская карта</span><img class="pick-list__image" width="209" height="22" src="img/icon-cards.svg" alt="Способы оплаты"><span class="pick-list__text">Комиссия 0%, самый безопасный способ</span></label>
+                </li>
+                <li class="pick-list__item">
+                  <input class="pick-list__item-checkbox visually-hidden" id="cash" type="radio" name="pay-way" value="cash">
+                  <label class="pick-list__item-box" for="cash"><span class="pick-list__name">При получении с оплатой доставки</span><span class="pick-list__text">Требуется предоплата доставки</span></label>
+                </li>
+                <li class="pick-list__item">
+                  <input class="pick-list__item-checkbox visually-hidden" id="account" type="radio" name="pay-way" value="account">
+                  <label class="pick-list__item-box" for="account"><span class="pick-list__name">Банковский счет</span><span class="pick-list__text">Оплата через р/с для юр. лиц</span></label>
+                </li>
+              </ul>
+            </div>
+            <div class="order__part user-data">
+              <h2 class="title title--h2 order__part-title"><span class="order__part-number">4.</span> Данные покупателя
+              </h2>
+              <div class="user-data__info">
+                <p class="input-field user-data__field">
+                  <input class="input input--valid" type="tel" name="tel" placeholder="Телефон" required><span class="input__name">Телефон</span><span class="input__status input__status--error">Телефон указан некорректно</span><span class="input__status input__status--ok">Все верно</span>
+                </p>
+                <p class="input-field user-data__field">
+                  <input class="input input--valid" type="email" name="email" placeholder="E-mail (необязательно)"><span class="input__name">E-mail</span><span class="input__status input__status--error">E-mail указан некорректно</span><span class="input__status input__status--ok">Все верно</span>
+                </p>
+                <p class="input-field user-data__field">
+                  <textarea class="input" name="comment" placeholder="Коментарий к заказу" rows="4"></textarea><span class="input__name">Коментарий к заказу</span>
+                </p>
+              </div>
+            </div>
+            <div class="order__part">
+              <div class="promocode order__part-promocode">
+                <input class="promocode__checkbox visually-hidden" id="promocode-field" type="checkbox" name="promocode-field">
+                <label class="promocode__button" for="promocode-field"><span class="promocode__text">Промокод</span><span class="promocode__text promocode__text--show">Введите промокод</span></label>
+                <p class="input-field promocode__field">
+                  <input class="input input--with-button" type="text" name="promocode" placeholder="Промокод">
+                  <button class="button button--with-input button--min button--next" type="button"></button>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="order__info">
+            <div class="order-card">
+              <p class="title title--h2 order-card__title">Ваш заказ<span class="order-card__number">№ 6797677</span></p>
+              <div class="order-card__part">
+                <p class="order-card__line">Товары (4)<span>2 900 ₽</span></p>
+                <p class="order-card__line">Доставка<span>2 200 ₽</span></p>
+              </div>
+              <div class="order-card__part">
+                <p class="order-card__line order-card__line--total">Итого<span>5 100 ₽</span></p>
+                <p class="order-card__line order-card__line--prepay">Предоплата<span>2 200 ₽</span></p>
+              </div>
+              <div class="order-card__part">
+                <button class="button order-card__button" type="submit" disabled>Подтвердить заказ</button>
+                <p class="order-card__button-caption">Нажимая на кнопку «Перейти к оплате», Вы соглашаетесь на <a href="#" target="_blank">обработку персональных данных</a></p>
+              </div>
+            </div>
+            <div class="order-feature">
+              <ul class="order-feature__list">
+                <li class="order-feature__item order-feature__item--help">
+                  <p class="order-feature__name">Нужна помощь?<span> <br><a class="order-feature__name-link" href="tel:88003333342">8 (800) 222-23-42</a> (c 09:00 до 18:00)</span></p>
+                  <p class="order-feature__text">без перерыва и выходных</p>
+                </li>
+                <li class="order-feature__item order-feature__item--safe">
+                  <p class="order-feature__name">Безопасная оплата</p>
+                  <p class="order-feature__text">оплата через процессинг ОАО "Сбербанк России"</p>
+                </li>
+                <li class="order-feature__item order-feature__item--guaranty">
+                  <p class="order-feature__name">Гарантия доставки</p>
+                  <p class="order-feature__text">работаем с службой курьерской доставки СДЭК</p>
+                </li>
+              </ul>
+            </div>
+          </div><a class="order__back-link">Вернуться в корзину</a>
+        </section>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__content page__container">
+        <p class="page-footer__copyright">2021 © «Новый мир»</p>
+        <p class="page-footer__pay"><img class="page-footer__pay-image" width="272" height="48" src="img/icon-cards-pale.svg" alt="Способы оплаты"></p>
+        <p class="page-footer__privacy"><a class="page-footer__privacy-link" href="#">Политика конфиденциальности</a></p>
+      </div>
+    </footer>
+    <script src="js/index.js" type="module"></script>
+    <div class="svg-library"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-arrow-breadcrumb" viewBox="0 0 9 13">
+<path d="M7.375 12.25L1.625 6.5L7.375 0.75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol><symbol id="icon-cross" viewBox="0 0 14 14">
+<path d="M1.39999 12.6004L12.6 1.40039" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.6 12.6004L1.39999 1.40039L12.6 12.6004Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol><symbol id="icon-help" viewBox="0 0 24 24">
+<path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.09009 8.99996C9.32519 8.33163 9.78924 7.76807 10.4 7.40909C11.0108 7.05012 11.729 6.9189 12.4273 7.03867C13.1255 7.15844 13.7589 7.52148 14.2152 8.06349C14.6714 8.60549 14.9211 9.29148 14.9201 9.99996C14.9201 12 11.9201 13 11.9201 13" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 17H12.01" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol></svg>
+    </div>
+  </body>
+</html>
