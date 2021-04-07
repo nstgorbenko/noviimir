@@ -1,0 +1,71 @@
+doctype html
+html(lang="ru")
+
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="./css/style.css")
+    title Новый мир. Личный кабинет
+
+  body.page
+    header.page-header
+      .page__container
+        a.page-header__logo-link(href="#")
+          img.page-header__logo-image(width="223" height="72" src="img/icon-logo.svg" alt="Логотип компании Новый мир")
+
+    main.page-main
+      .page__container
+
+        section.login
+          .login__process
+            h1.title.title--h1 Личный кабинет
+
+            .login__wrapper
+              .login-way
+                input#login.login-way__item-checkbox.login-way__item-checkbox--1.visually-hidden(type="radio", name="login-way", value="login", checked)
+                label.login-way__item-box(for="login") Авторизация
+
+                input#register.login-way__item-checkbox.login-way__item-checkbox--2.visually-hidden(type="radio", name="login-way", value="register")
+                label.login-way__item-box(for="register") Регистрация
+
+                .login-way__form.login-way__form--1
+                  h2.title.title--h2.login-way__title Авторизоваться
+                  .input-field.login__field
+                    input.input.input--with-button(type="text", name="register-data" placeholder="Телефон или e-mail", required)
+                    button.button.button--with-input(type="button") Получить код
+                    button.input__button(type="button", aria-label="Узнать формат данных")
+                      svg.input__icon.input__icon--help(width="24", height="24")
+                        use(xlink:href="img/sprite.svg#icon-help")
+                    .input__info
+                      p.input__info-text Телефон в формате: 7 000 000 00 00
+                      p.input__info-text Формат e-mail: name@exampie.ru
+                  p.input__caption Нажимая на кнопку «Получить код», Вы соглашаетесь 
+                    a.input__caption-link(href="#" target="_blank") на обработку персональных данных
+
+                .login-way__form.login-way__form--2
+                  h2.title.title--h2.login-way__title Зарегистрироваться
+                  p.login-way__field
+                    input.input(type="text", name="full-name" placeholder="ФИО", required)
+                  p.login-way__field
+                    input.input(type="tel", name="tel" placeholder="Телефон", required)
+                  p.login-way__field
+                    input.input(type="email", name="email" placeholder="E-mail (необязательно)")
+                  p.login-way__join
+                    input#subscribe.login-way__checkbox.visually-hidden(type="checkbox", name="subscribe", checked)
+                    label.login-way__checkbox-label(for="subscribe") Получать акции и новости на указанный адрес электронной почты
+                  button.button.login-way__button(type="submit") Регистрация
+                  p.input__caption Нажимая на кнопку «Получить код», Вы соглашаетесь 
+                    a.input__caption-link(href="#" target="_blank") на обработку персональных данных
+
+    footer.page-footer
+      .page-footer__content.page__container
+        p.page-footer__copyright 2021 © «Новый мир»
+        p.page-footer__pay
+          img.page-footer__pay-image(width="272" height="48" src="img/icon-cards-pale.svg" alt="Способы оплаты")
+        p.page-footer__privacy
+          a.page-footer__privacy-link(href="#") Политика конфиденциальности
+
+    script(src="js/index.js" type="module")
+
+    .svg-library
+      include ../img/sprite.svg

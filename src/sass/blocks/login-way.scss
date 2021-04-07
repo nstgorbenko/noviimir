@@ -1,0 +1,97 @@
+.login-way {
+  margin-top: 42px;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 30px;
+  }
+}
+
+.login-way__item-box {
+  @include font(18px, 21px, 500);
+  display: inline-block;
+  width: 229px;
+  margin-right: 6px;
+  padding: 18px 40px;
+  color: $color-text;
+  background-color: $color-line;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  text-align: center;
+  cursor: pointer;
+  transition: $main-transition;
+
+  @media (max-width: $tablet-width-min) {
+    width: 48.5%;
+    max-width: 229px;
+    margin-right: 3px;
+  }
+
+  @media (max-width: $mobile-width) {
+    @include font(16px, 19px, 500);
+    width: 48%;
+    padding: 12px;
+  }
+
+  .login-way__item-checkbox:checked + & {
+    color: $color-active;
+    border: 1px solid $color-active;
+    background-color: $white;
+  }
+}
+
+.login-way__form {
+  display: none;
+}
+
+.login-way__item-checkbox--1:checked ~ .login-way__form--1,
+.login-way__item-checkbox--2:checked ~ .login-way__form--2 {
+  display: block;
+}
+
+.login-way__title {
+  margin: 46px 0 33px;
+
+  @media (max-width: $mobile-width) {
+    margin: 25px 0 29px;
+  }
+}
+
+.login-way__field {
+  @include reset();
+  margin-top: 18px;
+}
+
+.login-way__join {
+  max-width: 320px;
+  margin-top: 20px;
+}
+
+.login-way__checkbox-label {
+  @include font(14px, 20px, 400);
+  display: block;
+  position: relative;
+  padding-left: 27px;
+  color: $color-text-light;
+  cursor: pointer;
+
+  &:before {
+    @include pseudo(21px, 21px);
+    top: 0;
+    left: 0;
+
+    .login-way__checkbox:checked ~ & {
+      background-image: url(../../img/icon-checked.svg);
+    }
+  }
+}
+
+.login-way__button {
+  @include font(16px, 20px, 400);
+  width: 320px;
+  margin-top: 12px;
+  padding: 14px;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+}

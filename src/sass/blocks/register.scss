@@ -23,8 +23,7 @@
 
   &:before {
     @include pseudo(21px, 21px);
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
     left: 0;
 
     .register__checkbox:checked ~ & {

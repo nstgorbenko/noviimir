@@ -59,13 +59,19 @@
   .input--with-button ~ & {
     width: 24px;
     height: 24px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 14px;
     left: 262px;
 
     @media (max-width: $mobile-width) {
       left: auto;
       right: 66px;
+    }
+  }
+
+  .popup .input--with-button ~ & {
+    @media (max-width: $mobile-width) {
+      left: auto;
+      right: 18px;
     }
   }
 }
@@ -95,6 +101,15 @@
   background-color: $white;
   box-shadow: 0 5px 10px rgba($black, 0.15);
   border-radius: 6px;
+  z-index: 1;
+
+  @media (max-width: $tablet-width-min) {
+    left: 67px;
+  }
+
+  @media (max-width: $mobile-width) {
+    left: 32px;
+  }
 
   &.show {
     display: block;

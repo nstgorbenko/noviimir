@@ -397,6 +397,16 @@ template {
         background-image: url("../img/icon-arrow-right.svg");
         background-repeat: no-repeat;
         background-position: 50% 50%; } }
+    @media (max-width: 450px) {
+      .popup .button--with-input {
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        width: 100%;
+        margin-top: 12px;
+        margin-left: 0;
+        background-image: none; } }
   .button--min {
     margin-left: -50px;
     padding: 0;
@@ -467,13 +477,16 @@ template {
   .input--with-button ~ .input__button {
     width: 24px;
     height: 24px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 14px;
     left: 262px; }
     @media (max-width: 450px) {
       .input--with-button ~ .input__button {
         left: auto;
         right: 66px; } }
+  @media (max-width: 450px) {
+    .popup .input--with-button ~ .input__button {
+      left: auto;
+      right: 18px; } }
 
 .input__icon {
   transition: all 0.2s ease; }
@@ -496,7 +509,14 @@ template {
   color: #999999;
   background-color: #FFFFFF;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-  border-radius: 6px; }
+  border-radius: 6px;
+  z-index: 1; }
+  @media (max-width: 892px) {
+    .input__info {
+      left: 67px; } }
+  @media (max-width: 450px) {
+    .input__info {
+      left: 32px; } }
   .input__info.show {
     display: block; }
 
@@ -788,6 +808,109 @@ template {
 
 .input-field {
   display: flex; }
+
+.login-way {
+  margin-top: 42px; }
+  @media (max-width: 450px) {
+    .login-way {
+      margin-top: 30px; } }
+
+.login-way__item-box {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 500;
+  display: inline-block;
+  width: 229px;
+  margin-right: 6px;
+  padding: 18px 40px;
+  color: #404040;
+  background-color: #F4F4F4;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease; }
+  @media (max-width: 892px) {
+    .login-way__item-box {
+      width: 48.5%;
+      max-width: 229px;
+      margin-right: 3px; } }
+  @media (max-width: 450px) {
+    .login-way__item-box {
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: 500;
+      width: 48%;
+      padding: 12px; } }
+  .login-way__item-checkbox:checked + .login-way__item-box {
+    color: #5DB061;
+    border: 1px solid #5DB061;
+    background-color: #FFFFFF; }
+
+.login-way__form {
+  display: none; }
+
+.login-way__item-checkbox--1:checked ~ .login-way__form--1,
+.login-way__item-checkbox--2:checked ~ .login-way__form--2 {
+  display: block; }
+
+.login-way__title {
+  margin: 46px 0 33px; }
+  @media (max-width: 450px) {
+    .login-way__title {
+      margin: 25px 0 29px; } }
+
+.login-way__field {
+  margin: 0;
+  padding: 0;
+  margin-top: 18px; }
+
+.login-way__join {
+  max-width: 320px;
+  margin-top: 20px; }
+
+.login-way__checkbox-label {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  display: block;
+  position: relative;
+  padding-left: 27px;
+  color: #666666;
+  cursor: pointer; }
+  .login-way__checkbox-label:before {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 0;
+    left: 0; }
+    .login-way__checkbox:checked ~ .login-way__checkbox-label:before {
+      background-image: url(../../img/icon-checked.svg); }
+
+.login-way__button {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  width: 320px;
+  margin-top: 12px;
+  padding: 14px; }
+  @media (max-width: 450px) {
+    .login-way__button {
+      width: 100%; } }
+
+.login__process {
+  margin: 60px 0 380px; }
+  @media (max-width: 1312px) {
+    .login__process {
+      margin: 60px 0 180px; } }
+  @media (max-width: 450px) {
+    .login__process {
+      margin: 10px 0 100px; } }
 
 .order-card {
   width: 350px;
@@ -1357,7 +1480,7 @@ template {
   padding: 18px 14px 20px;
   background-color: #FFFFFF;
   border-radius: 4px;
-  border: 1.5px solid transparent;
+  border: 1px solid transparent;
   box-shadow: 0 5px 10px rgba(102, 102, 102, 0.27);
   cursor: pointer;
   transition: all 0.2s ease; }
@@ -1367,7 +1490,7 @@ template {
       min-width: 260px;
       padding: 18px 14px 14px; } }
   .pick-list__item-checkbox:checked ~ .pick-list__item-box {
-    border: 1.5px solid #5DB061; }
+    border: 1px solid #5DB061; }
   @media (max-width: 892px) {
     .pick-list--double .pick-list__item-box {
       width: 100%; } }
@@ -1640,6 +1763,63 @@ template {
     .pickup__delivery-map {
       display: none; } }
 
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(21, 21, 21, 0.72); }
+
+.popup__content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  width: 92%;
+  max-width: 540px;
+  max-height: calc(100vh - 40px);
+  padding: 54px 50px;
+  background-color: #FFFFFF;
+  border-radius: 6px; }
+  @media (max-width: 892px) {
+    .popup__content {
+      padding: 40px 20px; } }
+
+.popup__field {
+  position: relative;
+  margin-top: 23px; }
+  @media (max-width: 450px) {
+    .popup__field {
+      display: flex;
+      flex-direction: column; } }
+
+.popup__button-close {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  padding: 8px; }
+  .popup__button-close:not(:disabled) {
+    cursor: pointer; }
+
+.popup__button-close-icon {
+  stroke: #999999;
+  transition: all 0.2s ease; }
+  .popup__button-close:hover .popup__button-close-icon,
+  .popup__button-close:focus .popup__button-close-icon {
+    stroke: #404040; }
+
 .promocode {
   position: relative;
   width: 357px;
@@ -1760,8 +1940,7 @@ template {
     position: absolute;
     width: 21px;
     height: 21px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
     left: 0; }
     .register__checkbox:checked ~ .register__checkbox-label:before {
       background-image: url(../../img/icon-checked.svg); }
