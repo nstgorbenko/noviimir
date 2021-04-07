@@ -22,7 +22,7 @@
             <div class="order__part register">
               <h2 class="title title--h2 order__part-title">Войти или зарегистрироваться</h2>
               <div class="input-field register__field">
-                <input class="input input--with-button" type="text" name="register-data" placeholder="Телефон или e-mail" required>
+                <input class="input input--with-button input--valid" type="text" name="register-data" placeholder="Телефон или e-mail" required><span class="input__name">Телефон или e-mail</span><span class="input__status input__status--error">Укажите телефон или e-mail</span><span class="input__status input__status--ok">Все верно</span>
                 <button class="button button--with-input" type="button">Получить код</button>
                 <button class="input__button" type="button" aria-label="Узнать формат данных">
                   <svg class="input__icon input__icon--help" width="24" height="24">
@@ -43,7 +43,9 @@
             <div class="order__part city">
               <h2 class="title title--h2 order__part-title"><span class="order__part-number">1.</span> Ваш город
               </h2>
-              <input class="input city__input" type="text" name="order-city" placeholder="Ваш город" required>
+              <div class="input-field">
+                <input class="input input--valid" type="text" name="order-city" placeholder="Ваш город" required><span class="input__name">Ваш город</span><span class="input__status input__status--error">Ошибка, такого города не существует</span><span class="input__status input__status--ok">Все верно</span>
+              </div>
             </div>
             <div class="order__part receive-way">
               <h2 class="title title--h2 order__part-title"><span class="order__part-number">2.</span> Выберите способ получения
@@ -89,14 +91,14 @@
               <h2 class="title title--h2 order__part-title"><span class="order__part-number">4.</span> Данные покупателя
               </h2>
               <div class="user-data__info">
-                <p class="user-data__field">
-                  <input class="input" type="tel" name="tel" placeholder="Телефон" required>
+                <p class="input-field user-data__field">
+                  <input class="input input--valid" type="tel" name="tel" placeholder="Телефон" required><span class="input__name">Телефон</span><span class="input__status input__status--error">Телефон указан некорректно</span><span class="input__status input__status--ok">Все верно</span>
                 </p>
-                <p class="user-data__field">
-                  <input class="input" type="email" name="email" placeholder="E-mail (необязательно)">
+                <p class="input-field user-data__field">
+                  <input class="input input--valid" type="email" name="email" placeholder="E-mail (необязательно)"><span class="input__name">E-mail</span><span class="input__status input__status--error">E-mail указан некорректно</span><span class="input__status input__status--ok">Все верно</span>
                 </p>
-                <p class="user-data__field">
-                  <textarea class="input" name="comment" placeholder="Коментарий к заказу" rows="4"></textarea>
+                <p class="input-field user-data__field">
+                  <textarea class="input" name="comment" placeholder="Коментарий к заказу" rows="4"></textarea><span class="input__name">Коментарий к заказу</span>
                 </p>
               </div>
             </div>

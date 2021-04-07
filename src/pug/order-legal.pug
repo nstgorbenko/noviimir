@@ -28,7 +28,10 @@ html(lang="ru")
             .order__part.register
               h2.title.title--h2.order__part-title Войти или зарегистрироваться
               .input-field.register__field
-                input.input.input--with-button(type="text", name="register-data" placeholder="Телефон или e-mail", required)
+                input.input.input--with-button.input--valid(type="text", name="register-data" placeholder="Телефон или e-mail", required)
+                span.input__name Телефон или e-mail
+                span.input__status.input__status--error Укажите телефон или e-mail
+                span.input__status.input__status--ok Все верно
                 button.button.button--with-input(type="button") Получить код
                 button.input__button(type="button", aria-label="Узнать формат данных")
                   svg.input__icon.input__icon--help(width="24", height="24")
@@ -47,7 +50,11 @@ html(lang="ru")
                 span.order__part-number 1.
                 = " "
                 | Ваш город
-              input.input.city__input(type="text", name="order-city" placeholder="Ваш город", required)
+              .input-field
+                input.input.input--valid(type="text", name="order-city" placeholder="Ваш город", required)
+                span.input__name Ваш город
+                span.input__status.input__status--error Ошибка, такого города не существует
+                span.input__status.input__status--ok Все верно
 
             .order__part.receive-way
               h2.title.title--h2.order__part-title
@@ -114,22 +121,44 @@ html(lang="ru")
                 = " "
                 | Данные покупателя
               .user-data__info
-                p.user-data__field
-                  input.input(type="text", name="company" placeholder="Название компании")
-                p.user-data__field
-                  input.input(type="text", name="inn" placeholder="ИНН")
-                p.user-data__field
-                  input.input(type="text", name="kpp" placeholder="КПП")
-                p.user-data__field
-                  input.input(type="text", name="bic" placeholder="БИК банка")
-                p.user-data__field
-                  input.input(type="text", name="bank-account" placeholder="Расчетный счет")
-                p.user-data__field
-                  input.input(type="text", name="legal-address" placeholder="Юридический адрес")
-                p.user-data__field
-                  input.input(type="text", name="actual-address" placeholder="Фактический адрес")
-                p.user-data__field
+                p.input-field.user-data__field
+                  input.input.input--valid(type="text", name="company" placeholder="Название компании")
+                  span.input__name Название компании
+                  span.input__status.input__status--error Ошибка
+                  span.input__status.input__status--ok Все верно
+                p.input-field.user-data__field
+                  input.input.input--valid(type="text", name="inn" placeholder="ИНН")
+                  span.input__name ИНН
+                  span.input__status.input__status--error Ошибка
+                  span.input__status.input__status--ok Все верно
+                p.input-field.user-data__field
+                  input.input.input--valid(type="text", name="kpp" placeholder="КПП")
+                  span.input__name КПП
+                  span.input__status.input__status--error Ошибка
+                  span.input__status.input__status--ok Все верно
+                p.input-field.user-data__field
+                  input.input.input--valid(type="text", name="bic" placeholder="БИК банка")
+                  span.input__name БИК банка
+                  span.input__status.input__status--error Ошибка
+                  span.input__status.input__status--ok Все верно
+                p.input-field.user-data__field
+                  input.input.input--valid(type="text", name="bank-account" placeholder="Расчетный счет")
+                  span.input__name Расчетный счет
+                  span.input__status.input__status--error Ошибка
+                  span.input__status.input__status--ok Все верно
+                p.input-field.user-data__field
+                  input.input.input--valid(type="text", name="legal-address" placeholder="Юридический адрес")
+                  span.input__name Юридический адрес
+                  span.input__status.input__status--error Ошибка
+                  span.input__status.input__status--ok Все верно
+                p.input-field.user-data__field
+                  input.input.input--valid(type="text", name="actual-address" placeholder="Фактический адрес")
+                  span.input__name Фактический адрес
+                  span.input__status.input__status--error Ошибка
+                  span.input__status.input__status--ok Все верно
+                p.input-field.user-data__field
                   textarea.input(name="comment" placeholder="Коментарий к заказу", rows="4")
+                  span.input__name Коментарий к заказу
 
             .order__part
               .promocode.order__part-promocode

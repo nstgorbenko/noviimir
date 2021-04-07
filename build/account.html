@@ -24,7 +24,7 @@
                 <div class="login-way__form login-way__form--1">
                   <h2 class="title title--h2 login-way__title">Авторизоваться</h2>
                   <div class="input-field login__field">
-                    <input class="input input--with-button" type="text" name="register-data" placeholder="Телефон или e-mail" required>
+                    <input class="input input--with-button input--valid" type="text" name="register-data" placeholder="Телефон или e-mail" required><span class="input__name">Телефон или e-mail</span><span class="input__status input__status--error">Укажите телефон или e-mail</span><span class="input__status input__status--ok">Все верно</span>
                     <button class="button button--with-input" type="button">Получить код</button>
                     <button class="input__button" type="button" aria-label="Узнать формат данных">
                       <svg class="input__icon input__icon--help" width="24" height="24">
@@ -40,14 +40,14 @@
                 </div>
                 <div class="login-way__form login-way__form--2">
                   <h2 class="title title--h2 login-way__title">Зарегистрироваться</h2>
-                  <p class="login-way__field">
-                    <input class="input" type="text" name="full-name" placeholder="ФИО" required>
+                  <p class="input-field login-way__field">
+                    <input class="input input--valid" type="text" name="full-name" placeholder="ФИО" required><span class="input__name">ФИО</span><span class="input__status input__status--error">Ошибка</span><span class="input__status input__status--ok">Все верно</span>
                   </p>
-                  <p class="login-way__field">
-                    <input class="input" type="tel" name="tel" placeholder="Телефон" required>
+                  <p class="input-field login-way__field">
+                    <input class="input input--valid" type="tel" name="tel" placeholder="Телефон" required><span class="input__name">Телефон</span><span class="input__status input__status--error">Телефон указан некорректно</span><span class="input__status input__status--ok">Все верно</span>
                   </p>
-                  <p class="login-way__field">
-                    <input class="input" type="email" name="email" placeholder="E-mail (необязательно)">
+                  <p class="input-field login-way__field">
+                    <input class="input input--valid" type="email" name="email" placeholder="E-mail (необязательно)"><span class="input__name">E-mail</span><span class="input__status input__status--error">E-mail указан некорректно</span><span class="input__status input__status--ok">Все верно</span>
                   </p>
                   <p class="login-way__join">
                     <input class="login-way__checkbox visually-hidden" id="subscribe" type="checkbox" name="subscribe" checked>

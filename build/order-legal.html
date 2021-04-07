@@ -22,7 +22,7 @@
             <div class="order__part register">
               <h2 class="title title--h2 order__part-title">Войти или зарегистрироваться</h2>
               <div class="input-field register__field">
-                <input class="input input--with-button" type="text" name="register-data" placeholder="Телефон или e-mail" required>
+                <input class="input input--with-button input--valid" type="text" name="register-data" placeholder="Телефон или e-mail" required><span class="input__name">Телефон или e-mail</span><span class="input__status input__status--error">Укажите телефон или e-mail</span><span class="input__status input__status--ok">Все верно</span>
                 <button class="button button--with-input" type="button">Получить код</button>
                 <button class="input__button" type="button" aria-label="Узнать формат данных">
                   <svg class="input__icon input__icon--help" width="24" height="24">
@@ -43,7 +43,9 @@
             <div class="order__part city">
               <h2 class="title title--h2 order__part-title"><span class="order__part-number">1.</span> Ваш город
               </h2>
-              <input class="input city__input" type="text" name="order-city" placeholder="Ваш город" required>
+              <div class="input-field">
+                <input class="input input--valid" type="text" name="order-city" placeholder="Ваш город" required><span class="input__name">Ваш город</span><span class="input__status input__status--error">Ошибка, такого города не существует</span><span class="input__status input__status--ok">Все верно</span>
+              </div>
             </div>
             <div class="order__part receive-way">
               <h2 class="title title--h2 order__part-title"><span class="order__part-number">2.</span> Выберите способ получения
@@ -101,29 +103,29 @@
               <h2 class="title title--h2 order__part-title"><span class="order__part-number">4.</span> Данные покупателя
               </h2>
               <div class="user-data__info">
-                <p class="user-data__field">
-                  <input class="input" type="text" name="company" placeholder="Название компании">
+                <p class="input-field user-data__field">
+                  <input class="input input--valid" type="text" name="company" placeholder="Название компании"><span class="input__name">Название компании</span><span class="input__status input__status--error">Ошибка</span><span class="input__status input__status--ok">Все верно</span>
                 </p>
-                <p class="user-data__field">
-                  <input class="input" type="text" name="inn" placeholder="ИНН">
+                <p class="input-field user-data__field">
+                  <input class="input input--valid" type="text" name="inn" placeholder="ИНН"><span class="input__name">ИНН</span><span class="input__status input__status--error">Ошибка</span><span class="input__status input__status--ok">Все верно</span>
                 </p>
-                <p class="user-data__field">
-                  <input class="input" type="text" name="kpp" placeholder="КПП">
+                <p class="input-field user-data__field">
+                  <input class="input input--valid" type="text" name="kpp" placeholder="КПП"><span class="input__name">КПП</span><span class="input__status input__status--error">Ошибка</span><span class="input__status input__status--ok">Все верно</span>
                 </p>
-                <p class="user-data__field">
-                  <input class="input" type="text" name="bic" placeholder="БИК банка">
+                <p class="input-field user-data__field">
+                  <input class="input input--valid" type="text" name="bic" placeholder="БИК банка"><span class="input__name">БИК банка</span><span class="input__status input__status--error">Ошибка</span><span class="input__status input__status--ok">Все верно</span>
                 </p>
-                <p class="user-data__field">
-                  <input class="input" type="text" name="bank-account" placeholder="Расчетный счет">
+                <p class="input-field user-data__field">
+                  <input class="input input--valid" type="text" name="bank-account" placeholder="Расчетный счет"><span class="input__name">Расчетный счет</span><span class="input__status input__status--error">Ошибка</span><span class="input__status input__status--ok">Все верно</span>
                 </p>
-                <p class="user-data__field">
-                  <input class="input" type="text" name="legal-address" placeholder="Юридический адрес">
+                <p class="input-field user-data__field">
+                  <input class="input input--valid" type="text" name="legal-address" placeholder="Юридический адрес"><span class="input__name">Юридический адрес</span><span class="input__status input__status--error">Ошибка</span><span class="input__status input__status--ok">Все верно</span>
                 </p>
-                <p class="user-data__field">
-                  <input class="input" type="text" name="actual-address" placeholder="Фактический адрес">
+                <p class="input-field user-data__field">
+                  <input class="input input--valid" type="text" name="actual-address" placeholder="Фактический адрес"><span class="input__name">Фактический адрес</span><span class="input__status input__status--error">Ошибка</span><span class="input__status input__status--ok">Все верно</span>
                 </p>
-                <p class="user-data__field">
-                  <textarea class="input" name="comment" placeholder="Коментарий к заказу" rows="4"></textarea>
+                <p class="input-field user-data__field">
+                  <textarea class="input" name="comment" placeholder="Коментарий к заказу" rows="4"></textarea><span class="input__name">Коментарий к заказу</span>
                 </p>
               </div>
             </div>

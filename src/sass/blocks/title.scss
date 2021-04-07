@@ -36,7 +36,7 @@
     }
   }
 
-  span {
+  .payment__number {
     @media (max-width: $mobile-width) {
       display: block;
     }

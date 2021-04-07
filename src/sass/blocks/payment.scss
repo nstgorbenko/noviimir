@@ -99,8 +99,12 @@
 
 .payment__button {
   display: inline-block;
-  margin: 40px auto 0;
+  margin: 40px auto 0 0;
   padding: 13px 36px;
+
+  @media (max-width: $tablet-width-min) {
+    margin: 40px auto 0;
+  }
 }
 
 .payment__note {

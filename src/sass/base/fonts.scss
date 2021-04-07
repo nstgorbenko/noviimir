@@ -23,6 +23,14 @@
 }
 
 @font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../font/Roboto-Bold.woff2") format("woff2"),
+      url("../font/Roboto-Bold.woff") format("woff");
+}
+
+@font-face {
   font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 600;

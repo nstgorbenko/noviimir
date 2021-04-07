@@ -28,7 +28,10 @@ html(lang="ru")
             .order__part.register
               h2.title.title--h2.order__part-title Войти или зарегистрироваться
               .input-field.register__field
-                input.input.input--with-button(type="text", name="register-data" placeholder="Телефон или e-mail", required)
+                input.input.input--with-button.input--valid(type="text", name="register-data" placeholder="Телефон или e-mail", required)
+                span.input__name Телефон или e-mail
+                span.input__status.input__status--error Укажите телефон или e-mail
+                span.input__status.input__status--ok Все верно
                 button.button.button--with-input(type="button") Получить код
                 button.input__button(type="button", aria-label="Узнать формат данных")
                   svg.input__icon.input__icon--help(width="24", height="24")
@@ -47,7 +50,11 @@ html(lang="ru")
                 span.order__part-number 1.
                 = " "
                 | Ваш город
-              input.input.city__input(type="text", name="order-city" placeholder="Ваш город", required)
+              .input-field
+                input.input.input--valid(type="text", name="order-city" placeholder="Ваш город", required)
+                span.input__name Ваш город
+                span.input__status.input__status--error Ошибка, такого города не существует
+                span.input__status.input__status--ok Все верно
 
             .order__part.receive-way
               h2.title.title--h2.order__part-title
@@ -103,12 +110,19 @@ html(lang="ru")
                 = " "
                 | Данные покупателя
               .user-data__info
-                p.user-data__field
-                  input.input(type="tel", name="tel" placeholder="Телефон", required)
-                p.user-data__field
-                  input.input(type="email", name="email" placeholder="E-mail (необязательно)")
-                p.user-data__field
+                p.input-field.user-data__field
+                  input.input.input--valid(type="tel", name="tel" placeholder="Телефон", required)
+                  span.input__name Телефон
+                  span.input__status.input__status--error Телефон указан некорректно
+                  span.input__status.input__status--ok Все верно
+                p.input-field.user-data__field
+                  input.input.input--valid(type="email", name="email" placeholder="E-mail (необязательно)")
+                  span.input__name E-mail
+                  span.input__status.input__status--error E-mail указан некорректно
+                  span.input__status.input__status--ok Все верно
+                p.input-field.user-data__field
                   textarea.input(name="comment" placeholder="Коментарий к заказу", rows="4")
+                  span.input__name Коментарий к заказу
 
             .order__part
               .promocode.order__part-promocode

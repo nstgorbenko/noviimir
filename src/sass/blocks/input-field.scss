@@ -1,3 +1,11 @@
 .input-field {
   display: flex;
+  flex-grow: 1;
+  position: relative;
+
+  .pickup__field & {
+    @media (max-width: $mobile-width) {
+      margin-top: 24px;
+    }
+  }
 }

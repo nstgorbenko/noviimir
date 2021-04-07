@@ -23,7 +23,7 @@
               <h2 class="title title--h2 order__part-title">Введите SMS-код</h2>
               <p class="register__user-data">Номер получателя: +7 900 967 77 00</p>
               <p class="input-field register__field">
-                <input class="input input--with-button" type="text" name="sms-code" placeholder="Код из SMS">
+                <input class="input input--with-button input--valid" type="text" name="sms-code" placeholder="Код из SMS"><span class="input__name">Код из SMS</span><span class="input__status input__status--error">Ошибка ввода кода</span><span class="input__status input__status--ok">Все верно</span>
                 <button class="button button--with-input button--min button--next" type="button"></button>
               </p>
               <p class="input__caption">Отправить повторно, через 115 сек.</p>
@@ -31,7 +31,9 @@
             <div class="order__part city">
               <h2 class="title title--h2 order__part-title"><span class="order__part-number">1.</span> Ваш город
               </h2>
-              <input class="input city__input" type="text" name="order-city" placeholder="Ваш город" required>
+              <div class="input-field">
+                <input class="input input--valid" type="text" name="order-city" placeholder="Ваш город" required><span class="input__name">Ваш город</span><span class="input__status input__status--error">Ошибка, такого города не существует</span><span class="input__status input__status--ok">Все верно</span>
+              </div>
             </div>
             <div class="order__part receive-way">
               <h2 class="title title--h2 order__part-title"><span class="order__part-number">2.</span> Выберите способ получения
@@ -89,14 +91,14 @@
               <h2 class="title title--h2 order__part-title"><span class="order__part-number">4.</span> Данные покупателя
               </h2>
               <div class="user-data__info">
-                <p class="user-data__field">
-                  <input class="input" type="tel" name="tel" placeholder="Телефон" required>
+                <p class="input-field user-data__field">
+                  <input class="input input--valid" type="tel" name="tel" placeholder="Телефон" required><span class="input__name">Телефон</span><span class="input__status input__status--error">Телефон указан некорректно</span><span class="input__status input__status--ok">Все верно</span>
                 </p>
-                <p class="user-data__field">
-                  <input class="input" type="email" name="email" placeholder="E-mail (необязательно)">
+                <p class="input-field user-data__field">
+                  <input class="input input--valid" type="email" name="email" placeholder="E-mail (необязательно)"><span class="input__name">E-mail</span><span class="input__status input__status--error">E-mail указан некорректно</span><span class="input__status input__status--ok">Все верно</span>
                 </p>
-                <p class="user-data__field">
-                  <textarea class="input" name="comment" placeholder="Коментарий к заказу" rows="4"></textarea>
+                <p class="input-field user-data__field">
+                  <textarea class="input" name="comment" placeholder="Коментарий к заказу" rows="4"></textarea><span class="input__name">Коментарий к заказу</span>
                 </p>
               </div>
             </div>

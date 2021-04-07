@@ -31,7 +31,10 @@ html(lang="ru")
                 .login-way__form.login-way__form--1
                   h2.title.title--h2.login-way__title Авторизоваться
                   .input-field.login__field
-                    input.input.input--with-button(type="text", name="register-data" placeholder="Телефон или e-mail", required)
+                    input.input.input--with-button.input--valid(type="text", name="register-data" placeholder="Телефон или e-mail", required)
+                    span.input__name Телефон или e-mail
+                    span.input__status.input__status--error Укажите телефон или e-mail
+                    span.input__status.input__status--ok Все верно
                     button.button.button--with-input(type="button") Получить код
                     button.input__button(type="button", aria-label="Узнать формат данных")
                       svg.input__icon.input__icon--help(width="24", height="24")
@@ -44,12 +47,21 @@ html(lang="ru")
 
                 .login-way__form.login-way__form--2
                   h2.title.title--h2.login-way__title Зарегистрироваться
-                  p.login-way__field
-                    input.input(type="text", name="full-name" placeholder="ФИО", required)
-                  p.login-way__field
-                    input.input(type="tel", name="tel" placeholder="Телефон", required)
-                  p.login-way__field
-                    input.input(type="email", name="email" placeholder="E-mail (необязательно)")
+                  p.input-field.login-way__field
+                    input.input.input--valid(type="text", name="full-name" placeholder="ФИО", required)
+                    span.input__name ФИО
+                    span.input__status.input__status--error Ошибка
+                    span.input__status.input__status--ok Все верно
+                  p.input-field.login-way__field
+                    input.input.input--valid(type="tel", name="tel" placeholder="Телефон", required)
+                    span.input__name Телефон
+                    span.input__status.input__status--error Телефон указан некорректно
+                    span.input__status.input__status--ok Все верно
+                  p.input-field.login-way__field
+                    input.input.input--valid(type="email", name="email" placeholder="E-mail (необязательно)")
+                    span.input__name E-mail
+                    span.input__status.input__status--error E-mail указан некорректно
+                    span.input__status.input__status--ok Все верно
                   p.login-way__join
                     input#subscribe.login-way__checkbox.visually-hidden(type="checkbox", name="subscribe", checked)
                     label.login-way__checkbox-label(for="subscribe") Получать акции и новости на указанный адрес электронной почты

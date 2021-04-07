@@ -30,7 +30,10 @@ html(lang="ru")
               p.register__user-data Номер получателя: +7 900 967 77 00
 
               p.input-field.register__field
-                input.input.input--with-button(type="text", name="sms-code" placeholder="Код из SMS")
+                input.input.input--with-button.input--valid(type="text", name="sms-code" placeholder="Код из SMS")
+                span.input__name Код из SMS
+                span.input__status.input__status--error Ошибка ввода кода
+                span.input__status.input__status--ok Все верно
                 button.button.button--with-input.button--min.button--next(type="button")
               p.input__caption Отправить повторно, через 115 сек.
 
@@ -39,7 +42,11 @@ html(lang="ru")
                 span.order__part-number 1.
                 = " "
                 | Ваш город
-              input.input.city__input(type="text", name="order-city" placeholder="Ваш город", required)
+              .input-field
+                input.input.input--valid(type="text", name="order-city" placeholder="Ваш город", required)
+                span.input__name Ваш город
+                span.input__status.input__status--error Ошибка, такого города не существует
+                span.input__status.input__status--ok Все верно
 
             .order__part.receive-way
               h2.title.title--h2.order__part-title
@@ -106,12 +113,19 @@ html(lang="ru")
                 = " "
                 | Данные покупателя
               .user-data__info
-                p.user-data__field
-                  input.input(type="tel", name="tel" placeholder="Телефон", required)
-                p.user-data__field
-                  input.input(type="email", name="email" placeholder="E-mail (необязательно)")
-                p.user-data__field
+                p.input-field.user-data__field
+                  input.input.input--valid(type="tel", name="tel" placeholder="Телефон", required)
+                  span.input__name Телефон
+                  span.input__status.input__status--error Телефон указан некорректно
+                  span.input__status.input__status--ok Все верно
+                p.input-field.user-data__field
+                  input.input.input--valid(type="email", name="email" placeholder="E-mail (необязательно)")
+                  span.input__name E-mail
+                  span.input__status.input__status--error E-mail указан некорректно
+                  span.input__status.input__status--ok Все верно
+                p.input-field.user-data__field
                   textarea.input(name="comment" placeholder="Коментарий к заказу", rows="4")
+                  span.input__name Коментарий к заказу
 
             .order__part
               .promocode.order__part-promocode
