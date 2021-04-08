@@ -1116,11 +1116,11 @@ template {
   margin-top: 22px;
   padding-left: 34px; }
   .order-feature__item--help {
-    background: url("../../img/icon-message.svg") no-repeat; }
+    background: url("../img/icon-message.svg") no-repeat; }
   .order-feature__item--safe {
-    background: url("../../img/icon-pocket.svg") no-repeat; }
+    background: url("../img/icon-pocket.svg") no-repeat; }
   .order-feature__item--guaranty {
-    background: url("../../img/icon-truck.svg") no-repeat; }
+    background: url("../img/icon-truck.svg") no-repeat; }
 
 .order-feature__name {
   margin: 0;
@@ -1602,9 +1602,9 @@ template {
       line-height: 16px;
       font-weight: 400; } }
   .pick-list__name--pickup {
-    background: url("../../img/icon-pickup.svg") no-repeat; }
+    background: url("../img/icon-pickup.svg") no-repeat; }
   .pick-list__name--delivery {
-    background: url("../../img/icon-delivery.svg") no-repeat; }
+    background: url("../img/icon-delivery.svg") no-repeat; }
   .pick-list--checkbox .pick-list__name::before {
     content: "";
     position: absolute;
@@ -1724,9 +1724,9 @@ template {
   .pickup__item:not(:first-child) {
     margin-top: 21px; }
   .pickup__item--time {
-    background: url("../../img/icon-time.svg") no-repeat; }
+    background: url("../img/icon-time.svg") no-repeat; }
   .pickup__item--info {
-    background: url("../../img/icon-info.svg") no-repeat; }
+    background: url("../img/icon-info.svg") no-repeat; }
   .pickup__item span {
     display: block; }
 
@@ -1938,9 +1938,9 @@ template {
     height: 24px;
     top: 0;
     right: 0;
-    background: url("../../img/icon-arrow-dropdown.svg") no-repeat; }
+    background: url("../img/icon-arrow-dropdown.svg") no-repeat; }
     .promocode__checkbox:checked ~ .promocode__button::after {
-      background: url("../../img/icon-cross.svg") no-repeat; }
+      background: url("../img/icon-cross.svg") no-repeat; }
 
 .promocode__checkbox:checked ~ .promocode__button .promocode__text {
   display: none; }

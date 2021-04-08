@@ -28,10 +28,10 @@
     @include pseudo(24px, 24px);
     top: 0;
     right: 0;
-    background: url("../../img/icon-arrow-dropdown.svg") no-repeat;
+    background: url("../img/icon-arrow-dropdown.svg") no-repeat;
 
     .promocode__checkbox:checked ~ & {
-      background: url("../../img/icon-cross.svg") no-repeat;
+      background: url("../img/icon-cross.svg") no-repeat;
     }
   }
 }
